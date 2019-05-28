@@ -183,7 +183,7 @@
 				// 导航卡下面的所有数据
 
 				userArticleList: [{
-						usreId: "1"
+						usreId: "1",
 						avatar: "https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg",
 						nickName: "败家女孩橙子",
 						tag: "时尚达人",
@@ -193,122 +193,121 @@
 						imgList: ["url1", "url2", "url3", "url4"],
 						comment: "3000",
 						thumbsUp: "2998"
-
 					},
 					{
 
+					}
+				]
 
-					]
 
 
 
+
+			}
+		},
+		methods: {
+
+			// 轮播图
+			DotStyle(e) {
+				this.dotStyle = e.detail.value
+			},
+			// cardSwiper
+			cardSwiper(e) {
+				this.cardCur = e.detail.current
+			},
+			// towerSwiper
+
+
+
+			// 搜索框
+			InputFocus(e) {
+				this.InputBottom = e.detail.height
+			},
+			InputBlur(e) {
+				this.InputBottom = 0
+			},
+
+			// 选项卡
+			tabSelect(e) {
+				this.TabCur = e.currentTarget.dataset.id;
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+			}
+		},
+		onLoad(e) {
+			// 请求轮播图
+			uni.request({
+				url: "https://www.easy-mock.com/mock/5cbaae65d5d33710e0cc47aa/quesong/social_adv", //仅为示例，并非真实接口地址。
+				method: "GET",
+				header: {
+					'content-type': 'application/json' //自定义请求头信息
+				},
+				success: (res) => {
+					// resres.data.data.swiperList
+					// console.log(res)
+					this.swiperList = res.data.data.swiperList
+
+				}
+			});
+
+
+
+			// 请求class_in
+			uni.request({
+				url: "https://www.easy-mock.com/mock/5cbaae65d5d33710e0cc47aa/quesong/class_in", //仅为示例，并非真实接口地址。
+				method: "GET",
+				header: {
+					'content-type': 'application/json' //自定义请求头信息
+				},
+				success: (res) => {
+					// resres.data.data.swiperList
+					// console.log(res)
+					// if(res.data.data.class_in){
+					// 	var swiper_length=null
+					// 	var swiper_array={}
+					// 	var swiper_obj={}
+					// 	swiper_length=res.data.data.class_in/10
+					// 	if(res.data.data.class_in%10>0){
+					// 		swiper_length++
+					// 	}
+					// 	for(var i=0;i<=res.data.data.class_in.length;i++){
+					// 		for(var j=0;j<=9;j++){
+					// 			swiper_obj.name=res.data.data.class_in[i].name
+					// 			swiper_obj.icon=res.data.data.class_in[i].icon
+					// 			swiper_array
+					// 		}
+					// 	}
+					// 	this.swiper_length=swiper_length
+					// }else{
+					// 	
+					// }
+
+					this.class_in = res.data.data.class_in
 
 
 				}
-			},
-			methods: {
+			});
 
-					// 轮播图
-					DotStyle(e) {
-						this.dotStyle = e.detail.value
-					},
-					// cardSwiper
-					cardSwiper(e) {
-						this.cardCur = e.detail.current
-					},
-					// towerSwiper
-
-
-
-					// 搜索框
-					InputFocus(e) {
-						this.InputBottom = e.detail.height
-					},
-					InputBlur(e) {
-						this.InputBottom = 0
-					},
-
-					// 选项卡
-					tabSelect(e) {
-						this.TabCur = e.currentTarget.dataset.id;
-						this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
-					}
+			// 请求分类
+			// return new Promise((res,rej)=>{
+			// 	
+			// })
+			uni.request({
+				url: "https://www.easy-mock.com/mock/5cbaae65d5d33710e0cc47aa/quesong/class_nav", //仅为示例，并非真实接口地址。
+				method: "GET",
+				header: {
+					'content-type': 'application/json' //自定义请求头信息
 				},
-				onLoad(e) {
-					// 请求轮播图
-					uni.request({
-						url: "https://www.easy-mock.com/mock/5cbaae65d5d33710e0cc47aa/quesong/social_adv", //仅为示例，并非真实接口地址。
-						method: "GET",
-						header: {
-							'content-type': 'application/json' //自定义请求头信息
-						},
-						success: (res) => {
-							// resres.data.data.swiperList
-							// console.log(res)
-							this.swiperList = res.data.data.swiperList
+				success: (res) => {
+					var result = res.data;
+					result.code == 200;
+					// resres.data.data.swiperList
+					// console.log(res)
+					this.class_nav = res.data.data.class_nav
 
-						}
-					});
-
-
-
-					// 请求class_in
-					uni.request({
-						url: "https://www.easy-mock.com/mock/5cbaae65d5d33710e0cc47aa/quesong/class_in", //仅为示例，并非真实接口地址。
-						method: "GET",
-						header: {
-							'content-type': 'application/json' //自定义请求头信息
-						},
-						success: (res) => {
-							// resres.data.data.swiperList
-							// console.log(res)
-							// if(res.data.data.class_in){
-							// 	var swiper_length=null
-							// 	var swiper_array={}
-							// 	var swiper_obj={}
-							// 	swiper_length=res.data.data.class_in/10
-							// 	if(res.data.data.class_in%10>0){
-							// 		swiper_length++
-							// 	}
-							// 	for(var i=0;i<=res.data.data.class_in.length;i++){
-							// 		for(var j=0;j<=9;j++){
-							// 			swiper_obj.name=res.data.data.class_in[i].name
-							// 			swiper_obj.icon=res.data.data.class_in[i].icon
-							// 			swiper_array
-							// 		}
-							// 	}
-							// 	this.swiper_length=swiper_length
-							// }else{
-							// 	
-							// }
-
-							this.class_in = res.data.data.class_in
-
-
-						}
-					});
-
-					// 请求分类
-					// return new Promise((res,rej)=>{
-					// 	
-					// })
-					uni.request({
-						url: "https://www.easy-mock.com/mock/5cbaae65d5d33710e0cc47aa/quesong/class_nav", //仅为示例，并非真实接口地址。
-						method: "GET",
-						header: {
-							'content-type': 'application/json' //自定义请求头信息
-						},
-						success: (res) => {
-							var result = res.data;
-							result.code == 200;
-							// resres.data.data.swiperList
-							// console.log(res)
-							this.class_nav = res.data.data.class_nav
-
-						}
-					});
-				},
-		}
+				}
+			});
+		},
+	}
 </script>
 
 <style lang="scss">
