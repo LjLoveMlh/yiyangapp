@@ -4,7 +4,8 @@
 		{
 			"path": "pages/tabbar/tabbar-1/tabbar-1",
 			"style": {
-				"navigationBarTitleText": "食糖人 "
+				
+				  "enablePullDownRefresh": true
 			}
 		},
 		{
