@@ -1,16 +1,15 @@
 <template>
 	<view class="bg-gray">
+		<view class="nav_bar"></view>
 		<!-- <view v-for="(item, index) in newsList" class="newslist">{{item}}</view> -->
 
 		<!-- 搜索框 -->
-		<view class="cu-bar search bg-white">
+		<view class="cu-bar search bg-white index_search">
 			<view class="search-form round ">
 
-				<input class="margin-left-lg" @focus="InputFocus" @blur="InputBlur" :adjust-position="false" type="text"
-				 placeholder="复制宝贝标题查找优惠券" confirm-type="search"></input>
+				<view class="margin-left-lg text-gray">复制宝贝标题查找优惠券</view>
 			</view>
 			<view class="action">
-				<!-- <button class="cu-btn bg-green shadow-blur round">搜索</button> -->
 				<view class="cuIcon-search text-df"> </view>
 			</view>
 		</view>
@@ -28,13 +27,17 @@
 
 
 		<!-- 四张图片比例布局 -->
-<selfFourAdver />
+		<selfFourAdver :datalist='fourAdverList' />
 
 
 		<!-- 选项卡导航 -->
-		<scroll-view scroll-x class="bg-white nav margin-tb-xs" scroll-with-animation :scroll-left="scrollLeft">
-			<view class="cu-item text-df" :class="index==TabCur?'text-red cur':''" v-for="(item,index) in class_nav" :key="index"
-			 @tap="tabSelect" :data-id="index">
+		<scroll-view 
+			scroll-x 
+			class="bg-white nav margin-top-xs solids-bottom class_in" 
+			scroll-with-animation 
+			:scroll-left="scrollLeft">
+			<view class="cu-item text-df" :class="index==TabCur?'text-red ':''" v-for="(item,index) in class_nav" :key="index"
+			 @tap="tabSelect(index)">
 				{{item.text}}
 			</view>
 		</scroll-view>
@@ -47,7 +50,11 @@
 				<userArticleItem :datalist="userItem" />
 			</block>
 			<!-- 正常的话应该是写再user Article中 -->
-			<view v-for="(item, index) in newsList" class="newslist" :key="index">{{item}}</view>
+			<view 
+				v-for="(item, index) in newsList" 
+				:key="index">
+				{{item}}
+			</view>
 			<uni-load-more :loadingType="loadingType" :contentText="contentText">
 			</uni-load-more>
 
@@ -66,23 +73,22 @@
 
 <script>
 	// 轮播图
-	import selfAdertise from '@/components/selfAdertise/selfAdertise.vue'
+	import selfAdertise from '@/components/selfAdertise.vue'
 
 	// 分类入口classin
 	import selfClassIn from '@/components/selfClassIn.vue'
-	
+
 	// 四张广告
 	import selfFourAdver from '@/components/selfFourAdver.vue'
-	
+
 	// 下拉刷新
-	import uniLoadMore from '@/components/uni-load-more/uni-load-more.vue';
+	import uniLoadMore from '@/components/uni-load-more.vue';
 	// 用户文章
-	import userArticleItem from '@/components/userArticleItem/userArticleItem.vue'
+	import userArticleItem from '@/components/userArticleItem.vue'
 	// 定义全局参数,控制数据加载
 	var _self,
 		page = 1,
 		timer = null;
-
 
 	export default {
 		components: { //2注册组件
@@ -105,16 +111,13 @@
 					contentrefresh: '正在加载...',
 					contentnomore: '没有更多数据了'
 				},
-
-
 				// 轮播图数据
 				cardCur: 0,
 				swiperList: [],
-
-
 				// 宫格列表数据
 				class_in: [],
-
+				// 四张广告图
+				fourAdverList: [],
 				// 导航卡
 				TabCur: 0,
 				scrollLeft: 0,
@@ -136,17 +139,12 @@
 			},
 			// towerSwiper
 
-			// 搜索框
-			InputFocus(e) {
-				this.InputBottom = e.detail.height
-			},
-			InputBlur(e) {
-				this.InputBottom = 0
-			},
+
+
 			// 选项卡
-			tabSelect(e) {
-				this.TabCur = e.currentTarget.dataset.id;
-				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+			tabSelect(index) {
+				this.TabCur =index;
+				this.scrollLeft = (index - 1) * 60
 			},
 
 
@@ -191,6 +189,19 @@
 				});
 			},
 
+			// 请求四张图广告fourAdverList
+			getFourAdverList(_self) {
+				this.uniFly.get({
+					url: 'fourAdverList',
+					params: null
+				}).then(function(response) {
+					// console.log(response)
+					_self.fourAdverList = response.data.data.fourAdverList
+				}).catch(function(error) {
+					// console.log(error)
+				});
+			},
+
 			// 请求某nav下用户文章
 			getUserArticleList(_self) {
 				this.uniFly.get({
@@ -215,6 +226,7 @@
 				_self.getClassIn(_self);
 				_self.getClassNav(_self);
 				_self.getUserArticleList(_self);
+				_self.getFourAdverList(_self);
 
 			},
 			// 上拉加载
@@ -249,8 +261,7 @@
 
 		onLoad(e) {
 			var _self = this
-
-			// 数据请求
+			// 初始化数据请求
 			_self.initRequestData(_self)
 
 
@@ -260,18 +271,13 @@
 		//下拉刷新，加载数据
 		onPullDownRefresh() {
 			var _self = this;
-
 			page = 1;
 			_self.loadingType = 1;
-
-
-
 			//  获取数据	
 			_self.getUserArticleList(_self)
 			setTimeout(() => {
-				uni.hideNavigationBarLoading();
 				uni.stopPullDownRefresh();
-			}, 1500)
+			}, 500)
 
 
 		},
@@ -304,29 +310,30 @@
 		margin-top: 20upx;
 	}
 
-
-
-
 	// 宫格
-
 	.lj_cu-item {
-
 		padding-top: 10upx;
 		padding-bottom: 10upx;
 		box-sizing: border-box;
 	}
 
-
-
-	.lj_margin_auto {
-		margin: auto;
-
-
+	.cu-bar .search-form {
+		line-height: normal !important;
+		display: flex;
+		align-items: center;
 	}
 
+	.nav_bar {
+		position: sticky;
+		top: 0;
+		height: var(--status-bar-height);
+		background: #fff;
+		z-index: 9999;
+	}
 
-
-	.lj_grid_pic {
-		margin: 5upx;
+	.class_in {
+		position: sticky;
+		top: var(--status-bar-height);
+		z-index: 1;
 	}
 </style>

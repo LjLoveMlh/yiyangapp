@@ -1,18 +1,15 @@
 <template>
 	<view>
 		<view class="wrap-top">
-			<view class="message-top margin-lr-xs">
-				<text class="cuIcon-settingsfill"></text>
-				消息设置
-			</view>
 			<view>
 				<view class="flex  padding justify-between">
 					<block v-for="(item,index) in iconList">
 						<view class="  margin-xs radius">
-							<view class="cu-item" :key="index">
-								<view class="cu-avatar radius solid bg-white tutu">
-									<view :class="['cuIcon-' + item.icon]">
-									</view>
+							<view class="cu-item " :key="index">
+								<view class="cu-avatar round solid bg-white tutu">
+									<!-- <view :class="['cuIcon-' + item.icon]"> -->
+									<!-- </view> -->
+									<img class='topImageList' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" alt="" />
 								</view>
 
 								<view class="text-center">{{item.dian}}</view>
@@ -30,7 +27,7 @@
 			</view>
 			<view class="cu-list menu-avatar">
 				<view class="cu-item grayscale">
-					<view class="cu-avatar lg round bg-white text-gray solids"><text class="cuIcon-noticefill"></text></view>
+					<view class="cu-avatar lg round bg-white text-gray "><img class='topImageList round' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" alt="" style="width:100%;height:100%;"/></view>
 					<view class="content">
 						<view>
 							<text class="text-cut">系统通知</text>
@@ -39,7 +36,7 @@
 					</view>
 				</view>
 				<view class="cu-item grayscale">
-					<view class="cu-avatar lg round bg-white text-gray solids"><text class="cuIcon-upload"></text></view>
+					<view class="cu-avatar lg round bg-white text-gray "><img class='topImageList round' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" alt="" style="width:100%;height:100%;"/></view>
 					<view class="content">
 						<view>
 							<text class="text-cut">推送消息</text>
@@ -49,148 +46,35 @@
 				</view>
 			</view>
 		</view>
-		<view class="cu-list menu-avatar comment solids-top">
-			<view class="cu-item">
-				<view class="cu-avatar round" @tap="showModal" data-target="Modal" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-				<view class="content">
-					<view class="text-grey">红尘货</view>
-					<view class="text-gray text-content text-df">
-						评论了你的文章
-						<view class="datatime">1天前</view>
-					</view>
-					<view>有一章3元券可以叠加，本来不想下单的，结果...</view>
-					<view class="textual padding-sm ">
-						<text class="cuIcon-forwardfill"></text>
-						<text class="text-left">原文：南国 开心椰球 榴莲味 100g</text>
-					</view>
-
-					<view>
-						<view class="cu-modal" :class="modalName=='Modal'?'show':''">
-							<view class="cu-dialog">
-								<view class="cu-bar bg-white justify-end">
-									<view class="content">Modal标题</view>
-									<view class="action" @tap="hideModal">
-										<text class="cuIcon-close text-red"></text>
-									</view>
-								</view>
-								<view class="padding-xl">
-									Modal 内容。
-								</view>
-							</view>
-						</view>
-					</view>
-
-					<!--
-					<view class="margin-top-sm flex justify-between">
-						<view class="text-gray text-df">2018年12月4日</view>
-						<view>
-							<text class="cuIcon-appreciatefill text-red"></text>
-							<text class="cuIcon-messagefill text-gray margin-left-sm"></text>
-						</view>
-					</view>
-					* -->
-				</view>
-			</view>
-			<view class="cu-item">
-				<view class="cu-avatar round" @tap="showModal" data-target="Modal" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-				<view class="content">
-					<view class="text-grey">红尘货</view>
-					<view class="text-gray text-content text-df">
-						评论了你的文章
-						<view class="datatime">1天前</view>
-					</view>
-					<view>有一章3元券可以叠加，本来不想下单的，结果...</view>
-					<view class="textual padding-sm ">
-						<text class="cuIcon-forwardfill"></text>
-						<text class="text-left">原文：南国 开心椰球 榴莲味 100g</text>
-					</view>
-
-					<view>
-						<view class="cu-modal" :class="modalName=='Modal'?'show':''">
-							<view class="cu-dialog">
-								<view class="cu-bar bg-white justify-end">
-									<view class="content">Modal标题</view>
-									<view class="action" @tap="hideModal">
-										<text class="cuIcon-close text-red"></text>
-									</view>
-								</view>
-								<view class="padding-xl">
-									Modal 内容。
-								</view>
-							</view>
-						</view>
-					</view>
-
-					<!--
-					<view class="margin-top-sm flex justify-between">
-						<view class="text-gray text-df">2018年12月4日</view>
-						<view>
-							<text class="cuIcon-appreciatefill text-red"></text>
-							<text class="cuIcon-messagefill text-gray margin-left-sm"></text>
-						</view>
-					</view>
-					* -->
-				</view>
-			</view>
 
 
-			<view class="cu-item">
-				<view class="cu-avatar round" @tap="showModal" data-name="liuxing" data-target="Modal" style="background-image:url(https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png);"></view>
-				<view class="content">
-					<view class="text-grey">红尘货</view>
-					<view class="text-gray text-content text-df">
-						评论了你的文章
-						<view class="datatime">1天前</view>
-					</view>
-					<view>有一章3元券可以叠加，本来不想下单的，结果...</view>
-					<view class="textual padding-sm ">
-						<text class="cuIcon-forwardfill"></text>
-						<text class="text-left">原文：南国 开心椰球 榴莲味 100g</text>
-					</view>
-
-					<view>
-						<view class="cu-modal" :class="modalName=='Modal'?'show':''">
-							<view class="cu-dialog">
-								<view class="cu-bar bg-white justify-end">
-									<view class="content">Modal标题</view>
-									<view class="action" @tap="hideModal">
-										<text class="cuIcon-close text-red"></text>
-									</view>
-								</view>
-								<view class="padding-xl">
-									Modal 内容。
-								</view>
-							</view>
-						</view>
-					</view>
-
-					<!--
-					<view class="margin-top-sm flex justify-between">
-						<view class="text-gray text-df">2018年12月4日</view>
-						<view>
-							<text class="cuIcon-appreciatefill text-red"></text>
-							<text class="cuIcon-messagefill text-gray margin-left-sm"></text>
-						</view>
-					</view>
-					* -->
-				</view>
-			</view>
+		<messageUser :datalist="userList" />
+		<messageUser :datalist="userList" />
+		<messageUser :datalist="userList" />
+		<messageUser :datalist="userList" />
+		<messageUser :datalist="userList" />
 
 
 
-		</view>
-
-
-
-
+ 
 	</view>
+
+
+
+
+
 </template>
 
 <script>
+	import messageUser from "@/components/messageUser.vue"
 	export default {
+		components: {
+			messageUser
+		},
+
 		data() {
 			return {
-				modalName: null,
+
 				iconList: [{
 						icon: "appreciatefill",
 						dian: "点赞"
@@ -203,19 +87,20 @@
 						icon: "messagefill",
 						dian: "评论和@"
 					}
-				]
+				],
+				userList: [{
+					user: "红尘货",
+					userComment: "评论了你的文章",
+					userCommentSays: "有一张3元券可以叠加，本来不想下单的，结果...",
+					originText: "原文：南国 开心椰球 榴莲味 100g",
+					dataTime: "1天前",
+					pic: "https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png"
+				}]
 			}
-		}
-	,
-	methods: {
-		showModal(e) {
-			console.log(e)
-			this.modalName = e.currentTarget.dataset.target
 		},
-		hideModal(e) {
-			this.modalName = null
+		methods: {
+
 		}
-	}
 	}
 </script>
 
@@ -225,21 +110,29 @@
 	}
 
 	.tutu {
-		padding:50upx;
+		width:100upx;
+		height:100upx;
 		
+		img{
+			width:100%;
+			height:100%;
+			border-radius:50%;
+		}
+
 	}
 
 	.message-top {
 		text-align: right;
 		line-height: 80upx;
+
 		text {
 			margin-right: 16upx;
 		}
 	}
 
-	
 
-	.datatime {
+
+	/**.datatime {
 		display: inline-block;
 		float: right;
 	}
@@ -247,10 +140,11 @@
 	.textual {
 		margin-top: 16upx;
 		border: 2upx solid #D6D6D6;
-		background-color:#F8F8F8;
-		 .text-left {
+		background-color: #F8F8F8;
+
+		.text-left {
 			margin-left: 16upx;
 		}
 	}
-
+	* **/
 </style>

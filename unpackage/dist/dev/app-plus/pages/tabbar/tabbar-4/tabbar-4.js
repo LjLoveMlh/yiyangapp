@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"wrap-top { background-color: white; }\n.",[1],"tutu { width: ",[0,100],"; height: ",[0,100],"; }\n.",[1],"tutu .",[1],"_img { width: 100%; height: 100%; border-radius: 50%; }\n.",[1],"message-top { text-align: right; line-height: ",[0,80],"; }\n.",[1],"message-top wx-text { margin-right: ",[0,16],"; }\n",],undefined,{path:"./pages/tabbar/tabbar-4/tabbar-4.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/tabbar/tabbar-4/tabbar-4.wxml') } }));

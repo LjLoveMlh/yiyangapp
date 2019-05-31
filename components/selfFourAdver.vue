@@ -1,31 +1,16 @@
 <template>
-	<view>		
-				<view class="grid col-2 margin-top-xs">
-			<view class="bg-gray">
-				<view class="bg-img  " style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10007.jpg');height: 207upx;">
+	<view>
+
+		<view class="bg-gray margin-top-xs">
+			<view class="grid  flex-sub  bg-gray  col-2">
+				<view v-for="(item,index) in datalist" :key="index" class=" lj_imgItem_width">
+					<view class="bg-img " style="height: 207upx;" :style="{'background-image':'url('+item.url+')'}">
 		
-				</view>
-			</view>
-		
-		
-			<view class="bg-gray">
-				<view class="bg-img  " style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10007.jpg');height: 207upx;">
-		
-				</view>
-			</view>
-			<view class="bg-gray">
-				<view class="bg-img  " style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10007.jpg');height: 207upx;">
-		
-				</view>
-			</view>
-			<view class="bg-gray">
-				<view class="bg-img  " style="background-image: url('https://ossweb-img.qq.com/images/lol/web201310/skin/big10007.jpg');height: 207upx;">
-		
+					</view>  
 				</view>
 			</view>
 		</view>
-		
-		
+
 	</view>
 </template>
 
@@ -33,22 +18,46 @@
 	export default {
 		data() {
 			return {
-				
+
 			};
 		},
 		name: "selfFourAdver",
 		props: {
 			datalist: {
-				type: Object,
-				default: () => {}
+				type: Array,
+				default: () => []
 			}
 		},
 		created() {
-		
+
 		}
 	}
 </script>
 
 <style lang="scss">
+	.lj_imgItem_width{
+		width: 48%;
+	}
+	
+	.col-2>view:nth-child(1) {
+		padding-right: 4upx;
 
+	}
+
+	.col-2>view:nth-child(2) {
+		padding-left: 4upx;
+	
+	}
+
+	.col-2>view:nth-child(3) {
+			padding-right: 4upx;
+			margin-top: 8upx;
+	
+	}
+
+	.col-2>view:nth-child(4) {
+		margin-top: 8upx;
+		padding-left: 4upx;
+
+	}
 </style>

@@ -22,8 +22,8 @@
 		name: "selfAdertise",
 		props: {
 			datalist: {
-				type: Object,
-				default: () => {}
+				type: Array,
+				default: () => []
 			}
 		},
 		created() {
