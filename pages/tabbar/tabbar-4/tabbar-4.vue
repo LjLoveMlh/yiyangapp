@@ -1,62 +1,44 @@
 <template>
 	<view>
 		<view class="wrap-top">
+			<!-- 顶部分类入口 -->
 			<view>
-				<view class="flex  padding justify-between">
+				<view class="flex solids-top  solids-bottom padding justify-between">
 					<block v-for="(item,index) in iconList">
 						<view class="  margin-xs radius">
 							<view class="cu-item " :key="index">
 								<view class="cu-avatar round solid bg-white tutu">
 									<!-- <view :class="['cuIcon-' + item.icon]"> -->
 									<!-- </view> -->
-									<img class='topImageList' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" alt="" />
+									<img class='topImageList' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" />
+
+									<view class="cu-tag badge"></view>
 								</view>
 
 								<view class="text-center">{{item.dian}}</view>
 							</view>
 						</view>
 					</block>
-
-					<!-- 	<view class="bg-grey padding-sm margin-xs radius">
-
-					</view>
-					<view class="bg-grey padding-sm margin-xs radius">
-
-					</view> -->
 				</view>
 			</view>
-			<view class="cu-list menu-avatar">
-				<view class="cu-item grayscale">
-					<view class="cu-avatar lg round bg-white text-gray "><img class='topImageList round' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" alt="" style="width:100%;height:100%;"/></view>
-					<view class="content">
-						<view>
-							<text class="text-cut">系统通知</text>
-						</view>
-						<view class="text-gray text-sm flex"> <text class="text-cut">您好，欢迎使用app</text></view>
-					</view>
-				</view>
-				<view class="cu-item grayscale">
-					<view class="cu-avatar lg round bg-white text-gray "><img class='topImageList round' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" alt="" style="width:100%;height:100%;"/></view>
-					<view class="content">
-						<view>
-							<text class="text-cut">推送消息</text>
-						</view>
-						<view class="text-gray text-sm flex"> <text class="text-cut">618，全民狂欢节</text></view>
-					</view>
-				</view>
-			</view>
+
+
+
+			<!-- 系统通知，消息推送，（发帖入口组件） -->
+			<selfPostingEntry :datalist='messageTypeList' />
 		</view>
 
 
-		<messageUser :datalist="userList" />
-		<messageUser :datalist="userList" />
-		<messageUser :datalist="userList" />
-		<messageUser :datalist="userList" />
-		<messageUser :datalist="userList" />
 
 
 
- 
+
+		<messageUser :datalist="usrCommonList" />
+
+
+
+
+
 	</view>
 
 
@@ -66,14 +48,25 @@
 </template>
 
 <script>
+	//通知列表入口，发帖入口
+	import selfPostingEntry from "@/components/selfPostingEntry.vue"
+
+
+	// 用户文章评论列表
 	import messageUser from "@/components/messageUser.vue"
 	export default {
 		components: {
-			messageUser
+			messageUser,
+			selfPostingEntry
 		},
 
 		data() {
 			return {
+				//消息通知入口
+				messageTypeList: [],
+				// 用户评论数据
+				usrCommonList: [],
+
 
 				iconList: [{
 						icon: "appreciatefill",
@@ -99,7 +92,44 @@
 			}
 		},
 		methods: {
+			// 初始化数据请求	
+			initRequestData(_self) {
+				var _self = _self
+				_self.getMessageTypeList(_self);
+				_self.getUsrCommonList(_self);
+			},
 
+			// 获取通知列表入口
+			getMessageTypeList(_self) {
+				this.uniFly.get({
+					url: 'messageTypeList',
+					params: null
+				}).then(function(response) {
+					// console.log(response)
+					_self.messageTypeList = response.data.data.messageTypeList
+				}).catch(function(error) {
+					// console.log(error)
+				});
+			},
+
+			// 获取用户评论数据
+			getUsrCommonList(_self) {
+				this.uniFly.get({
+					url: 'usrCommonList',
+					params: null
+				}).then(function(response) {
+					// console.log(response)
+					_self.usrCommonList = response.data.data.usrCommonList
+				}).catch(function(error) {
+					// console.log(error)
+				});
+			},
+		},
+
+		onLoad() {
+			var _self = this
+			// 初始化数据请求
+			_self.initRequestData(_self);
 		}
 	}
 </script>
@@ -110,13 +140,13 @@
 	}
 
 	.tutu {
-		width:100upx;
-		height:100upx;
-		
-		img{
-			width:100%;
-			height:100%;
-			border-radius:50%;
+		width: 100upx;
+		height: 100upx;
+
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
 		}
 
 	}
@@ -129,22 +159,4 @@
 			margin-right: 16upx;
 		}
 	}
-
-
-
-	/**.datatime {
-		display: inline-block;
-		float: right;
-	}
-
-	.textual {
-		margin-top: 16upx;
-		border: 2upx solid #D6D6D6;
-		background-color: #F8F8F8;
-
-		.text-left {
-			margin-left: 16upx;
-		}
-	}
-	* **/
 </style>

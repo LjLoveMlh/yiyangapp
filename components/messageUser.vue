@@ -1,43 +1,63 @@
 <template>
-	<view>
-		<view class="cu-list menu-avatar comment solids-top">
-			<view class="cu-item" v-for="item in datalist">
-				<view class="cu-avatar round" :style="{'background-image':'url('+item.pic+')'}"></view>
-				<view class="content">
-					<view class="text-grey">{{item.user}}</view>
-					<view class="text-gray text-content text-df">
-						{{item.userComment}}
-						<view class="datatime">{{item.dataTime}}</view>
-					</view>
-					<!-- <view>{{item.userCommentSays}}</view> -->
-
-
-					<!-- 原文文章摘要 -->
-					<!-- 	<view class="textual padding-sm ">
-						<text class="cuIcon-forwardfill"></text>
-						<text class="text-left">{{item.originText}}</text>
-					</view> -->
-					<view class="cu-card article no-card" >
-						<view class="cu-item shadow">
-							<view class="title">
-								<view class="text-cut">{{item.userCommentSays}}</view>
-							</view>
-							<view class="content">
-								<image src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" mode="aspectFill"></image>
-								<view class="desc">
-									<view class="text-content"> {{item.originText}}</view>
-									<view>
-										<view class="cu-tag bg-red light sm round">正义天使</view>
-										<view class="cu-tag bg-green light sm round">史诗</view>
-									</view>
-								</view>
-							</view>
+<view v-for="(item,index) in datalist">
+		<!-- 用户基础信息部分 -->
+		<view class="bg-gray margin-bottom-xs ">
+			<view class="cu-list menu-avatar  ">
+				<view class="cu-item">
+					<view class="cu-avatar round lg" :style="{'background-image':'url('+item.avatar+')'}">
+						<view class="pic-zi ">
+							<image class="lj_tag_vip" src="/static/img/vip/vip_red.png">
+							</image>
 						</view>
 					</view>
+					<view class="content flex-sub">
+						<!-- 用户名 -->
+						<view class="text-grey flex justify-between">
+							<view>
+								<text class="text-black text-df"> {{item.nickName}}</text>
+								<!-- 用户标签 -->
+								<view class='cu-tag ljCuTag  round line-red lj_margin_left10 '>{{item.tag}}</view>
+							</view>
+						</view>
+						<view class="text-gray text-xs flex justify-between ">
+							{{item.desrc}}
+						</view>
+					</view>
+					<!-- 右侧关注 -->
+					<button class="cu-btn line-red sm  margin-right-sm ">
+						<text class='cuIcon-add '> 关注</text>
+					</button>
 				</view>
 			</view>
+			<!-- 内容部分 -->
+			<view class="text-content bg-white ">
+				<view class="margin-lr-sm">
+					<text class="text-blue " v-for="(topicItem,index) in item.topic" :key="index">#{{topicItem}}# </text>
+					{{item.contentText}}
+				</view>
+			</view>
+
+			<!-- 用户发布图片部分 -->
+			<view class="bg-white cu-card dynamic no-card">
+					<view class="cu-item shadow">
+				<view class="grid flex-sub padding-top-xs  margin-lr-xs  grid-square bg-white flex justify-between solids-bottom "
+				 :class="{'col-1 ljCol1Heght':item.imgList.length==1,'col-2':item.imgList.length==2,'col-3':item.imgList.length>2}">
+					<view class="bg-img "  v-for="(imgItem,index) in item.imgList" :key="index" @tap="viewimg(item.imgList,imgItem)">
+						<image mode='aspectFill'  :src="imgItem" @tap="viewimg(item.imgList,imgItem)"></image>
+					</view>
+				</view>
+					</view>
+			</view>
+			<!-- 分享评论居中 -->
+			<view class="text-gray text-df text-df text-center padding-tb-sm flex justify-around bg-white ">
+				<view><text class="cuIcon-forwardfill margin-right-xs"></text> 43</view>
+				<view><text class="cuIcon-comment margin-right-xs"></text>{{item.comment}} </view>
+				<view><text class="cuIcon-appreciate margin-right-xs"></text>{{item.thumbsUp}} </view>
+			</view>
+
 		</view>
 	</view>
+
 </template>
 
 <script>
@@ -50,7 +70,7 @@
 		name: "messageUser",
 		props: {
 
-			datalist: {
+			item: {
 				type: Array,
 				default: () => []
 			}

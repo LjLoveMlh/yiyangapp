@@ -48,20 +48,6 @@
 				</view>
 					</view>
 			</view>
-
-			<!-- <view class="bg-white">
-				<view class="user_item_imgwrap">
-					<view
-						v-for="(imgItem,index) in datalist.imgList" 
-						:key="index" 
-						:class="{'item_img1':datalist.imgList.length==1,'item_img2':datalist.imgList.length==2,'item_img3':datalist.imgList.length>2}">
-						<image :src="imgItem" @tap="viewimg(datalist.imgList,imgItem)"></image>
-					</view>
-				</view>
-			</view> -->
-
-
-
 			<!-- 分享评论居中 -->
 			<view class="text-gray text-df text-df text-center padding-tb-sm flex justify-around bg-white ">
 				<view><text class="cuIcon-forwardfill margin-right-xs"></text> 43</view>
