@@ -39,14 +39,14 @@
 
 			<!-- 用户发布图片部分 -->
 			<view class="bg-white cu-card dynamic no-card">
-					<view class="cu-item shadow">
-				<view class="grid flex-sub padding-top-xs  margin-lr-xs  grid-square bg-white flex justify-between solids-bottom "
-				 :class="{'col-1 ljCol1Heght':datalist.imgList.length==1,'col-2':datalist.imgList.length==2,'col-3':datalist.imgList.length>2}">
-					<view class="bg-img "  v-for="(imgItem,index) in datalist.imgList" :key="index" @tap="viewimg(datalist.imgList,imgItem)">
-						<image mode='aspectFill'  :src="imgItem" @tap="viewimg(datalist.imgList,imgItem)"></image>
+				<view class="cu-item shadow">
+					<view class="grid flex-sub padding-top-xs  margin-lr-xs  grid-square bg-white flex justify-between solids-bottom "
+					 :class="{'col-1 ljCol1Heght':datalist.imgList.length==1,'col-2':datalist.imgList.length==2,'col-3':datalist.imgList.length>2}">
+						<view class="bg-img " v-for="(imgItem,index) in datalist.imgList" :key="index" @tap="viewimg(datalist.imgList,imgItem)">
+							<image mode='aspectFill' :src="imgItem" @tap="viewimg(datalist.imgList,imgItem)"></image>
+						</view>
 					</view>
 				</view>
-					</view>
 			</view>
 			<!-- 分享评论居中 -->
 			<view class="text-gray text-df text-df text-center padding-tb-sm flex justify-around bg-white ">
@@ -91,26 +91,30 @@
 
 <style lang="scss">
 	$imgheight:250upx;
-// 文章1张图片时候的高度
-.ljCol1Heght{
-	height: 420upx;
-}
+
+	// 文章1张图片时候的高度
+	.ljCol1Heght {
+		height: 420upx;
+	}
+
 	.lj_margin_left10 {
 		margin-left: 10upx;
 	}
-.ljCuTag{
+
+	.ljCuTag {
 		font-size: 20upx;
-	vertical-align: middle;
-	position: relative;
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	box-sizing: border-box;
-	padding: 0upx 16upx;
-	height: 40upx;
-	font-family: Helvetica Neue, Helvetica, sans-serif;
-	white-space: nowrap;
-}
+		vertical-align: middle;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		padding: 0upx 16upx;
+		height: 40upx;
+		font-family: Helvetica Neue, Helvetica, sans-serif;
+		white-space: nowrap;
+	}
+
 	.pic-zi {
 		position: absolute;
 		right: -2upx;
@@ -137,7 +141,7 @@
 
 			image {
 				width: 100%;
-			height: 320upx;
+				height: 320upx;
 			}
 		}
 

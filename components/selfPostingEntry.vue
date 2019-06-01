@@ -1,23 +1,24 @@
 <template>
 	<view>
-		<view class="cu-list menu-avatar" v-for="(item,index) in datalist">
-
-
-			<view class="cu-item ">
-				<view class="cu-avatar round lg" :style="{'background-image':'url('+item.url+')'}"></view>
-				<view class="content  ">
-					<view class="text-black mess-t">{{item.title}}</view>
-					<view class="text-gray text-sm flex">
-						<text class=" mess-b">
-							{{item.desrc}}
-						</text>
+		<view class="cu-list menu-avatar ">
+			<block v-for="(item,index) in datalist">
+				<view class="cu-item lj_margin-tb-lg padding-tb-xs ">
+					<view class="cu-avatar round lg" :style="{'background-image':'url('+item.url+')'}"></view>
+					<view class="content  ">
+						<view class="text-black mess-t">{{item.title}}</view>
+						<view class="text-gray text-sm flex">
+							<text class=" mess-b">
+								{{item.desrc}}
+							</text>
+						</view>
+					</view>
+					<view class="action ">
+						<view class="cuIcon-right text-gray"></view>
 					</view>
 				</view>
-				<view class="action ">
-					<view class="cuIcon-right text-gray"></view>
-				</view>
-			</view>
-<!-- 			<view class="LineFather margin-top-sm" v-if="datalist.length-1!=index">
+			</block>
+
+			<!-- 			<view class="LineFather margin-top-sm" v-if="datalist.length-1!=index">
 				<view class="LineAvatar"></view>
 				<view class="LineMain"></view>
 				<view class="LineLast"></view>
@@ -49,8 +50,9 @@
 	}
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped="">
 	page {
+		
 		background-color: #fff;
 
 		.mess-t {
@@ -65,8 +67,14 @@
 			overflow: hidden;
 		}
 
+
+		.lj_margin-tb-lg {
+			margin-top: -15upx;
+			margin-bottom: -15upx;
+		}
+
 		.LineFather {
-			
+
 			display: flex;
 			flex-direction: row;
 
@@ -88,7 +96,6 @@
 			}
 		}
 
-
-
 	}
+
 </style>

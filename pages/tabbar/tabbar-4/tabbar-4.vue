@@ -1,39 +1,26 @@
 <template>
-	<view>
-		<view class="wrap-top">
-			<!-- 顶部分类入口 -->
-			<view>
-				<view class="flex solids-top  solids-bottom padding justify-between">
-					<block v-for="(item,index) in iconList">
-						<view class="  margin-xs radius">
-							<view class="cu-item " :key="index">
-								<view class="cu-avatar round solid bg-white tutu">
-									<!-- <view :class="['cuIcon-' + item.icon]"> -->
-									<!-- </view> -->
-									<img class='topImageList' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg" />
-
-									<view class="cu-tag badge"></view>
-								</view>
-
-								<view class="text-center">{{item.dian}}</view>
-							</view>
-						</view>
-					</block>
-				</view>
-			</view>
+	<view class="bg-gray">
+		<!-- 		<view class="wrap-top"> -->
+		<!-- 顶部分类入口 -->
+		<selfTopClassThum :datalist='topClassThumbList'></selfTopClassThum>
 
 
 
-			<!-- 系统通知，消息推送，（发帖入口组件） -->
+
+
+		<!-- 系统通知，消息推送，（发帖入口组件） -->
+		<view class="padding-tb- ">
 			<selfPostingEntry :datalist='messageTypeList' />
+
 		</view>
 
 
 
+		<!-- 评论内容及原文 -->
+		<view class="margin-top-xs">
+			<messageUser :datalist="usrCommonList" />
+		</view>
 
-
-
-		<messageUser :datalist="usrCommonList" />
 
 
 
@@ -48,6 +35,9 @@
 </template>
 
 <script>
+	// 顶部分类入口
+	import selfTopClassThum from "@/components/selfTopClassThum.vue"
+
 	//通知列表入口，发帖入口
 	import selfPostingEntry from "@/components/selfPostingEntry.vue"
 
@@ -57,7 +47,8 @@
 	export default {
 		components: {
 			messageUser,
-			selfPostingEntry
+			selfPostingEntry,
+			selfTopClassThum
 		},
 
 		data() {
@@ -67,20 +58,10 @@
 				// 用户评论数据
 				usrCommonList: [],
 
+				//顶部分类入口 
+				topClassThumbList: [],
 
-				iconList: [{
-						icon: "appreciatefill",
-						dian: "点赞"
-					},
-					{
-						icon: "group",
-						dian: "粉丝"
-					},
-					{
-						icon: "messagefill",
-						dian: "评论和@"
-					}
-				],
+
 				userList: [{
 					user: "红尘货",
 					userComment: "评论了你的文章",
@@ -97,6 +78,7 @@
 				var _self = _self
 				_self.getMessageTypeList(_self);
 				_self.getUsrCommonList(_self);
+				_self.getTopClassThumbList(_self);
 			},
 
 			// 获取通知列表入口
@@ -124,6 +106,18 @@
 					// console.log(error)
 				});
 			},
+			// 获取顶部分类入口数据
+			getTopClassThumbList(_self) {
+				this.uniFly.get({
+					url: 'topClassThumbList',
+					params: null
+				}).then(function(response) {
+					// console.log(response)
+					_self.topClassThumbList = response.data.data.topClassThumbList
+				}).catch(function(error) {
+					// console.log(error)
+				});
+			},
 		},
 
 		onLoad() {
@@ -135,28 +129,34 @@
 </script>
 
 <style lang="scss">
-	.wrap-top {
-		background-color: white;
+	.ljCuTag {
+		font-size: 20upx;
+		vertical-align: middle;
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		box-sizing: border-box;
+		padding: 0upx 16upx;
+		height: 40upx;
+		font-family: Helvetica Neue, Helvetica, sans-serif;
+		white-space: nowrap;
 	}
 
-	.tutu {
-		width: 100upx;
-		height: 100upx;
+	.pic-zi {
+		position: absolute;
+		right: -2upx;
+		bottom: -8upx;
+		font-size: 38upx;
+		color: orange;
 
-		img {
-			width: 100%;
-			height: 100%;
+
+		.lj_tag_vip {
+			width: 35upx;
+			height: 35upx;
+			z-index: 1;
+			border: 2upx solid white;
 			border-radius: 50%;
-		}
-
-	}
-
-	.message-top {
-		text-align: right;
-		line-height: 80upx;
-
-		text {
-			margin-right: 16upx;
 		}
 	}
 </style>

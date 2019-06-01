@@ -70,7 +70,6 @@
 			// border: 2px solid red;
 			display: flex;
 			flex-direction: column;
-
 		}
 
 
