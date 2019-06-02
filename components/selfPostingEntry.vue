@@ -72,30 +72,6 @@
 			margin-top: -15upx;
 			margin-bottom: -15upx;
 		}
-
-		.LineFather {
-
-			display: flex;
-			flex-direction: row;
-
-			// border: 2px solid red;
-			.LineAvatar {
-				flex: 1;
-				// border-bottom: 2upx solid  #eee;
-				// border: 2px solid red;
-			}
-
-			.LineMain {
-				flex: 3.8;
-				border-bottom: 2upx solid #eee;
-				// border: 2px solid blue;
-			}
-
-			.LineLast {
-				flex: 0.4;
-			}
-		}
-
 	}
 
 </style>

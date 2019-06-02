@@ -24,38 +24,41 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.wrap-top {
-  background-color: white;
+.ljCuTag {
+  font-size: 20rpx;
+  vertical-align: middle;
+  position: relative;
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0rpx 16rpx;
+  height: 40rpx;
+  font-family: Helvetica Neue, Helvetica, sans-serif;
+  white-space: nowrap;
 }
-.tutu {
-  width: 100rpx;
-  height: 100rpx;
+.pic-zi {
+  position: absolute;
+  right: -2rpx;
+  bottom: -8rpx;
+  font-size: 38rpx;
+  color: orange;
 }
-.tutu ._img {
-    width: 100%;
-    height: 100%;
+.pic-zi .lj_tag_vip {
+    width: 35rpx;
+    height: 35rpx;
+    z-index: 1;
+    border: 2rpx solid white;
     border-radius: 50%;
 }
-.message-top {
-  text-align: right;
-  line-height: 80rpx;
-}
-.message-top text {
-    margin-right: 16rpx;
-}
-/**.datatime {
-	display: inline-block;
-	float: right;
-}
-
-.textual {
-	margin-top: 16upx;
-	border: 2upx solid #D6D6D6;
-	background-color: #F8F8F8;
-
-	.text-left {
-		margin-left: 16upx;
-	}
-}
-* **/
 

@@ -98,54 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var selfAdertise = function selfAdertise() {return __webpack_require__.e(/*! import() | components/selfAdertise */ "components/selfAdertise").then(__webpack_require__.bind(null, /*! @/components/selfAdertise.vue */ "../../../../ProjectAbout/yiyangapp/components/selfAdertise.vue"));};var _default =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var selfAdertise = function selfAdertise() {return __webpack_require__.e(/*! import() | components/selfAdertise */ "components/selfAdertise").then(__webpack_require__.bind(null, /*! @/components/selfAdertise.vue */ "../../../../ProjectAbout/yiyangapp/components/selfAdertise.vue"));};var selfPostingEntry = function selfPostingEntry() {return __webpack_require__.e(/*! import() | components/selfPostingEntry */ "components/selfPostingEntry").then(__webpack_require__.bind(null, /*! @/components/selfPostingEntry.vue */ "../../../../ProjectAbout/yiyangapp/components/selfPostingEntry.vue"));};var _default =
 
 
 
@@ -167,12 +120,14 @@ __webpack_require__.r(__webpack_exports__);
 
 {
   components: { //2注册组件
-    selfAdertise: selfAdertise },
+    selfAdertise: selfAdertise,
+    selfPostingEntry: selfPostingEntry },
 
   data: function data() {
     return {
       active: false,
-      swiperList: [] };
+      swiperList: [],
+      postingEntryList: [] };
 
   },
 
@@ -202,18 +157,26 @@ __webpack_require__.r(__webpack_exports__);
         // console.log(error)
       });
     },
-    goToPage: function goToPage(url) {
-      if (!url) return;
-      uni.navigateTo({
-        url: url });
 
+    // 获取发帖功能入口列表
+    getPostingEntryList: function getPostingEntryList(_self) {
+      this.uniFly.get({
+        url: 'postingEntryList',
+        params: null }).
+      then(function (response) {
+        // console.log(response)
+        _self.postingEntryList = response.data.data.postingEntryList;
+      }).catch(function (error) {
+        // console.log(error)
+      });
     },
+
     // 初始化数据请求	
     initRequestData: function initRequestData(_self) {
       var _self = _self;
       _self.getAdv(_self);
+      _self.getPostingEntryList(_self);
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

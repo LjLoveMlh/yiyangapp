@@ -98,30 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var messageUser = function messageUser() {return __webpack_require__.e(/*! import() | components/messageUser */ "components/messageUser").then(__webpack_require__.bind(null, /*! @/components/messageUser.vue */ "../../../../ProjectAbout/yiyangapp/components/messageUser.vue"));};var _default =
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var selfTopClassThum = function selfTopClassThum() {return __webpack_require__.e(/*! import() | components/selfTopClassThum */ "components/selfTopClassThum").then(__webpack_require__.bind(null, /*! @/components/selfTopClassThum.vue */ "../../../../ProjectAbout/yiyangapp/components/selfTopClassThum.vue"));};var selfPostingEntry = function selfPostingEntry() {return __webpack_require__.e(/*! import() | components/selfPostingEntry */ "components/selfPostingEntry").then(__webpack_require__.bind(null, /*! @/components/selfPostingEntry.vue */ "../../../../ProjectAbout/yiyangapp/components/selfPostingEntry.vue"));};var messageUser = function messageUser() {return __webpack_require__.e(/*! import() | components/messageUser */ "components/messageUser").then(__webpack_require__.bind(null, /*! @/components/messageUser.vue */ "../../../../ProjectAbout/yiyangapp/components/messageUser.vue"));};var _default =
 
 
 
@@ -169,23 +146,20 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 {
   components: {
-    messageUser: messageUser },
+    messageUser: messageUser,
+    selfPostingEntry: selfPostingEntry,
+    selfTopClassThum: selfTopClassThum },
 
 
   data: function data() {
     return {
+      //消息通知入口
+      messageTypeList: [],
+      // 用户评论数据
+      usrCommonList: [],
 
-      iconList: [{
-        icon: "appreciatefill",
-        dian: "点赞" },
-
-      {
-        icon: "group",
-        dian: "粉丝" },
-
-      {
-        icon: "messagefill",
-        dian: "评论和@" }],
+      //顶部分类入口 
+      topClassThumbList: [],
 
 
       userList: [{
@@ -198,7 +172,59 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    // 初始化数据请求	
+    initRequestData: function initRequestData(_self) {
+      var _self = _self;
+      _self.getMessageTypeList(_self);
+      _self.getUsrCommonList(_self);
+      _self.getTopClassThumbList(_self);
+    },
+
+    // 获取通知列表入口
+    getMessageTypeList: function getMessageTypeList(_self) {
+      this.uniFly.get({
+        url: 'messageTypeList',
+        params: null }).
+      then(function (response) {
+        // console.log(response)
+        _self.messageTypeList = response.data.data.messageTypeList;
+      }).catch(function (error) {
+        // console.log(error)
+      });
+    },
+
+    // 获取用户评论数据
+    getUsrCommonList: function getUsrCommonList(_self) {
+      this.uniFly.get({
+        url: 'usrCommonList',
+        params: null }).
+      then(function (response) {
+        // console.log(response)
+        _self.usrCommonList = response.data.data.usrCommonList;
+      }).catch(function (error) {
+        // console.log(error)
+      });
+    },
+    // 获取顶部分类入口数据
+    getTopClassThumbList: function getTopClassThumbList(_self) {
+      this.uniFly.get({
+        url: 'topClassThumbList',
+        params: null }).
+      then(function (response) {
+        // console.log(response)
+        _self.topClassThumbList = response.data.data.topClassThumbList;
+      }).catch(function (error) {
+        // console.log(error)
+      });
+    } },
+
+
+  onLoad: function onLoad() {
+    var _self = this;
+    // 初始化数据请求
+    _self.initRequestData(_self);
+  } };exports.default = _default;
 
 /***/ }),
 

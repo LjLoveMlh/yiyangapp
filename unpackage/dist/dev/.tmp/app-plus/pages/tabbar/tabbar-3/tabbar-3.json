@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "发帖",
   "usingComponents": {
-    "self-adertise": "/components/selfAdertise"
+    "self-adertise": "/components/selfAdertise",
+    "self-posting-entry": "/components/selfPostingEntry"
   }
 }

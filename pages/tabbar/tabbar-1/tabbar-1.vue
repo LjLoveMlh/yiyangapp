@@ -241,7 +241,7 @@
 					url: 'https://demo.hcoder.net/index.php?user=hcoder&pwd=hcoder&m=list1&page=' + page,
 					method: 'GET',
 					success: function(res) {
-						console.log(JSON.stringify(res));
+						// console.log(JSON.stringify(res));
 						if (res.data == null) { //没有数据
 							_self.loadingType = 2;
 							uni.hideNavigationBarLoading(); //关闭加载动画
@@ -274,7 +274,7 @@
 			page = 1;
 			_self.loadingType = 1;
 			//  获取数据	
-			_self.getUserArticleList(_self)
+			_self.getUserArticleList(_self);
 			setTimeout(() => {
 				uni.stopPullDownRefresh();
 			}, 500)

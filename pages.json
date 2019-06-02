@@ -34,7 +34,12 @@
 		},
 		{
 			"path": "pages/tabbar/tabbar-5/tabbar-5",
-			"style": {		"navigationBarTitleText": "个人中心"}
+			"style": {	
+				"navigationBarTitleText": "个人中心",
+					"app-plus": {
+					"titleNView": false
+				}
+				}
 		},
 		{
 			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",

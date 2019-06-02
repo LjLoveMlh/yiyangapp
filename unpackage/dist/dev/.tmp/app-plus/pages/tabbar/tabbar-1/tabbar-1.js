@@ -341,7 +341,7 @@ timer = null;var _default =
         url: 'https://demo.hcoder.net/index.php?user=hcoder&pwd=hcoder&m=list1&page=' + page,
         method: 'GET',
         success: function success(res) {
-          console.log(JSON.stringify(res), " at pages\\tabbar\\tabbar-1\\tabbar-1.vue:244");
+          // console.log(JSON.stringify(res));
           if (res.data == null) {//没有数据
             _self.loadingType = 2;
             uni.hideNavigationBarLoading(); //关闭加载动画

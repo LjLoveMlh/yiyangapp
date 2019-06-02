@@ -24,4 +24,20 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
+page.data-v-d6c664ee {
+  background-color: #fff;
+}
+page .mess-t.data-v-d6c664ee {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+}
+page .mess-b.data-v-d6c664ee {
+    white-space: nowrap;
+    overflow: hidden;
+}
+page .lj_margin-tb-lg.data-v-d6c664ee {
+    margin-top: -15rpx;
+    margin-bottom: -15rpx;
+}
 

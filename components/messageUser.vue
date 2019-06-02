@@ -5,7 +5,7 @@
 			<view class="bg-gray margin-bottom-xs ">
 				<view class="cu-list menu-avatar  ">
 					<view class="cu-item ljPMBottom0">
-						<view class="cu-avatar round lg" :style="{'background-image':'url('+item.avatar+')'}">
+						<view class="cu-avatar round ljlg" :style="{'background-image':'url('+item.avatar+')'}">
 							<view class="pic-zi ">
 								<image class="lj_tag_vip" src="/static/img/vip/vip_red.png">
 								</image>
@@ -89,30 +89,42 @@
 	.ljPMBottom0 {
 		padding-bottom: 0px;
 		margin-bottom: 0px;
-		
+
+		.ljlg {
+			width: 90upx;
+			height: 90upx;
+		}
 	}
+
 	// 原文摘要卡片
 	.ljCommentAll {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+
 		.ljUserCommentText {}
+
 		.ljUserArticleAll {
 			display: flex;
 			flex-direction: row;
+
 			.articleImg {
 				.imgHelp {
 					width: 140upx;
 					height: 140upx;
+
 					image {
 						width: 100%;
 						height: 100%;
 					}
 				}
 			}
+
 			.articleRight {
 				width: 100%;
+
 				.articleAuthor {}
+
 				.articleContent {
 					font-size: 24upx;
 					// text-overflow: -o-ellipsis-lastline;
@@ -122,7 +134,7 @@
 					-webkit-line-clamp: 2;
 					line-clamp: 2;
 					-webkit-box-orient: vertical;
-					text-indent:2em;
+					text-indent: 2em;
 				}
 
 			}
@@ -154,9 +166,11 @@
 		color: orange;
 
 
+
+
 		.lj_tag_vip {
-			width: 35upx;
-			height: 35upx;
+			width: 30upx;
+			height: 30upx;
 			z-index: 1;
 			border: 2upx solid white;
 			border-radius: 50%;
