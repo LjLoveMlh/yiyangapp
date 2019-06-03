@@ -120,6 +120,40 @@ createPage(_tabbar.default);
 
 /***/ }),
 
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-2-detail%2FpageAddFollow%2FpageAddFollow\"}":
+/*!*****************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-2-detail%2FpageAddFollow%2FpageAddFollow"} ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageAddFollow = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-2-detail/pageAddFollow/pageAddFollow.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-2-detail/pageAddFollow/pageAddFollow.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageAddFollow.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-3-detial%2FpageWriteNews%2FpageWriteNews\"}":
+/*!*****************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-3-detial%2FpageWriteNews%2FpageWriteNews"} ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageWriteNews = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-3-detial/pageWriteNews/pageWriteNews.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-3-detial/pageWriteNews/pageWriteNews.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageWriteNews.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-3-detial%2Ftabbar-3-qa%2Ftabbar-3-qa\"}":
 /*!*************************************************************************************************************************!*\
   !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-3-detial%2Ftabbar-3-qa%2Ftabbar-3-qa"} ***!

@@ -9,7 +9,7 @@
 
 
 		<!-- 系统通知，消息推送，（发帖入口组件） -->
-		<view class="padding-tb- ">
+		<view class="padding-tb-xs bg-white ">
 			<selfPostingEntry :datalist='messageTypeList' />
 
 		</view>

@@ -98,143 +98,87 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var selfUserCard = function selfUserCard() {return __webpack_require__.e(/*! import() | components/selfUserCard */ "components/selfUserCard").then(__webpack_require__.bind(null, /*! @/components/selfUserCard.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserCard.vue"));};var selfUserOverCard = function selfUserOverCard() {return __webpack_require__.e(/*! import() | components/selfUserOverCard */ "components/selfUserOverCard").then(__webpack_require__.bind(null, /*! @/components/selfUserOverCard.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserOverCard.vue"));};var selfUserFunList = function selfUserFunList() {return __webpack_require__.e(/*! import() | components/selfUserFunList */ "components/selfUserFunList").then(__webpack_require__.bind(null, /*! @/components/selfUserFunList.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserFunList.vue"));};var _default =
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {
+  components: {
+    selfUserCard: selfUserCard,
+    selfUserOverCard: selfUserOverCard,
+    selfUserFunList: selfUserFunList },
+
   data: function data() {
     return {
-      iconList: [{
-        icon: 'cardboardfill',
-
-
-        name: '我的文章' },
-      {
-        icon: 'recordfill',
-
-
-        name: '我的评论' },
-      {
-        icon: 'picfill',
-
-
-        name: '我的点赞' },
-      {
-        icon: 'noticefill',
-
-
-        name: '我的爆料' },
-      {
-        icon: 'upstagefill',
-
-
-        name: '邀请有利' },
-      {
-        icon: 'clothesfill',
-
-
-        name: '我要赚钱' },
-      {
-        icon: 'discoverfill',
-
-
-        name: '联系客服' },
-      {
-        icon: 'questionfill',
-
-
-        name: '关于我们' }] };
-
-
+      userCenterData: [] };
 
   },
-  methods: {} };exports.default = _default;
+  methods: {
+    // 初始化数据请求	
+    initRequestData: function initRequestData(_self) {
+      var _self = _self;
+      _self.getUserCenterData(_self);
+    },
+
+    // 请求用户中心所有数据
+    getUserCenterData: function getUserCenterData(_self) {
+      this.uniFly.get({
+        url: 'userCenterData',
+        params: null }).
+      then(function (response) {
+        // console.log(response)
+        _self.userCenterData = response.data.data.userCenterData;
+      }).catch(function (error) {
+        // console.log(error)
+      });
+    } },
+
+
+  onLoad: function onLoad() {
+    var _self = this;
+    // 初始化数据请求
+    _self.initRequestData(_self);
+  } };exports.default = _default;
 
 /***/ }),
 

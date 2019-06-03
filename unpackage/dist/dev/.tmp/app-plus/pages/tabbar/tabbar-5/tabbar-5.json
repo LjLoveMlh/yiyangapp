@@ -1,5 +1,9 @@
 {
   "navigationBarTitleText": "个人中心",
   "titleNView": false,
-  "usingComponents": {}
+  "usingComponents": {
+    "self-user-card": "/components/selfUserCard",
+    "self-user-over-card": "/components/selfUserOverCard",
+    "self-user-fun-list": "/components/selfUserFunList"
+  }
 }

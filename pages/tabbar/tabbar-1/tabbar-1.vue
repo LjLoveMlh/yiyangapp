@@ -1,35 +1,21 @@
 <template>
 	<view class="bg-gray">
 		<view class="nav_bar"></view>
-		<!-- <view v-for="(item, index) in newsList" class="newslist">{{item}}</view> -->
-
 		<!-- 搜索框 -->
 		<view class="cu-bar search bg-white index_search">
 			<view class="search-form round ">
-
 				<view class="margin-left-lg text-gray">复制宝贝标题查找优惠券</view>
 			</view>
 			<view class="action">
 				<view class="cuIcon-search text-df"> </view>
 			</view>
 		</view>
-
 		<!-- 轮播图 -->
 		<selfAdertise :datalist='swiperList' />
-
-
-
-
 		<!-- 宫格列表 -->
 		<selfClassIn :datalist='class_in' />
-
-
-
-
 		<!-- 四张图片比例布局 -->
 		<selfFourAdver :datalist='fourAdverList' />
-
-
 		<!-- 选项卡导航 -->
 		<scroll-view 
 			scroll-x 
@@ -41,11 +27,8 @@
 				{{item.text}}
 			</view>
 		</scroll-view>
-
-
 		<!-- 对应显示的内容 -->
 		<view v-for="(item,index) in class_nav" :key="index" v-if="index==TabCur">
-
 			<block v-for="(userItem,userIndex) in userArticleList" :key="userIndex">
 				<userArticleItem :datalist="userItem" />
 			</block>
@@ -57,18 +40,8 @@
 			</view>
 			<uni-load-more :loadingType="loadingType" :contentText="contentText">
 			</uni-load-more>
-
 		</view>
-
-
-
-
 	</view>
-
-
-
-
-
 </template>
 
 <script>

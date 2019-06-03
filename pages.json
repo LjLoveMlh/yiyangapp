@@ -53,7 +53,21 @@
 			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
 			"style": {}
 		}
-	],
+	 
+        ,{
+            "path" : "pages/tabbar-2-detail/pageAddFollow/pageAddFollow",
+            "style" : {
+				"navigationBarTitleText":"添加关注"
+				
+			}
+        }
+        ,{
+            "path" : "pages/tabbar-3-detial/pageWriteNews/pageWriteNews",
+            "style" : {
+				"navigationBarTitleText":"爆好料"
+			}
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarBackgroundColor": "#F8F8F8",

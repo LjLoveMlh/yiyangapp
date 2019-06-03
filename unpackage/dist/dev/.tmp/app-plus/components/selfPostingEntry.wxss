@@ -27,17 +27,69 @@
 page.data-v-d6c664ee {
   background-color: #fff;
 }
-page .mess-t.data-v-d6c664ee {
-    font-weight: bold;
-    white-space: nowrap;
-    overflow: hidden;
-}
-page .mess-b.data-v-d6c664ee {
-    white-space: nowrap;
-    overflow: hidden;
-}
 page .lj_margin-tb-lg.data-v-d6c664ee {
     margin-top: -15rpx;
     margin-bottom: -15rpx;
+}
+.report_list_item.data-v-d6c664ee {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 35rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.report_list_item .item_left.data-v-d6c664ee {
+    margin: 16rpx 0;
+}
+.report_list_item .item_left .item_left_img.data-v-d6c664ee {
+      width: 96rpx;
+      height: 96rpx;
+}
+.report_list_item .item_left .item_left_img image.data-v-d6c664ee {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+}
+.report_list_item .item_right.data-v-d6c664ee {
+    width: calc(96% - 96rpx);
+    margin-left: 18rpx;
+    border-bottom: 1px solid #f5f5f5;
+}
+.report_list_item .item_right .ljContentAll.data-v-d6c664ee {
+      height: 100%;
+}
+.report_list_item .item_right .ljContentAll .ljContent.data-v-d6c664ee {
+        width: 90%;
+        margin: auto;
+        padding-right: 10rpx;
+        margin-left: 0px;
+}
+.report_list_item .item_right .ljContentAll .ljContent .mess-t.data-v-d6c664ee {
+          font-weight: bold;
+          white-space: nowrap;
+          overflow: hidden;
+}
+.report_list_item .item_right .ljContentAll .ljContent .mess-b.data-v-d6c664ee {
+          white-space: nowrap;
+          overflow: hidden;
+          margin-top: 4rpx;
+}
+.report_list_item .item_right .ljContentAll .ljAction.data-v-d6c664ee {
+        height: 100%;
+        margin-right: 0px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+}
+.report_list_item .item_right .ljContentAll .ljAction .ljActionHelp.data-v-d6c664ee {
+          -webkit-align-self: center;
+              -ms-flex-item-align: center;
+                  align-self: center;
+}
+.report_list:last-child .item_right.data-v-d6c664ee {
+  border-bottom: none;
 }
 

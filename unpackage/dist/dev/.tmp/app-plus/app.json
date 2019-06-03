@@ -7,7 +7,9 @@
     "pages/tabbar/tabbar-5/tabbar-5",
     "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
     "pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video",
-    "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa"
+    "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
+    "pages/tabbar-2-detail/pageAddFollow/pageAddFollow",
+    "pages/tabbar-3-detial/pageWriteNews/pageWriteNews"
   ],
   "subPackages": [],
   "window": {

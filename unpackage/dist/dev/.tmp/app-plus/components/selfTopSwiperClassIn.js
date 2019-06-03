@@ -98,19 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
-
-
-
-
-
-
-
-
-
-
-
-
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -163,19 +151,8 @@ var _selfTopSwiperClassIn = _interopRequireDefault(__webpack_require__(/*! @/com
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-var _default2 = { data: function data() {return {};}, name: "selfTopSwiperClassIn", props: { datalist: { type: Array, default: function _default() {return [];} } }, created: function created() {}, methods: {} };exports.default = _default2;
+var _default2 = { data: function data() {return {};}, name: "selfTopSwiperClassIn", props: { datalist: { type: Array, default: function _default() {return [];} } }, created: function created() {}, methods: { goToPageAddFollow: function goToPageAddFollow() {uni.navigateTo({ url: '/pages/tabbar-2-detail/pageAddFollow/pageAddFollow' });} } };exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

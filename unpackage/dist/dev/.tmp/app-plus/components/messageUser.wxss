@@ -72,8 +72,10 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         line-clamp: 2;
-        -webkit-box-orient: vertical;
+        height: 60rpx;
         text-indent: 2em;
+        -o-text-overflow: clip !important;
+           text-overflow: clip !important;
 }
 .ljCuTag {
   font-size: 20rpx;

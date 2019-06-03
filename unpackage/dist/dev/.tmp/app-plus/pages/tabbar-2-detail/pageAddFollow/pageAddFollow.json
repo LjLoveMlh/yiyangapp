@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "添加关注",
+  "usingComponents": {
+    "self-follow-search-bar": "/components/selfFollowSearchBar",
+    "self-follow-topic-recom": "/components/selfFollowTopicRecom",
+    "self-follow-user-recom": "/components/selfFollowUserRecom"
+  }
+}

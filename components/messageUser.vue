@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view v-for="(item,index) in datalist">
+		<view v-for="(item,index) in datalist"  :key='index'>
 			<!-- 用户基础信息部分 -->
 			<view class="bg-gray margin-bottom-xs ">
 				<view class="cu-list menu-avatar  ">
@@ -119,7 +119,6 @@
 					}
 				}
 			}
-
 			.articleRight {
 				width: 100%;
 
@@ -129,21 +128,17 @@
 					font-size: 24upx;
 					// text-overflow: -o-ellipsis-lastline;
 					overflow: hidden;
-					// text-overflow: ellipsis;
 					display: -webkit-box;
 					-webkit-line-clamp: 2;
 					line-clamp: 2;
-					-webkit-box-orient: vertical;
+					height: 60upx;
 					text-indent: 2em;
+					text-overflow: clip !important;
 				}
 
 			}
 		}
 	}
-
-
-
-
 	.ljCuTag {
 		font-size: 20upx;
 		vertical-align: middle;
@@ -164,10 +159,6 @@
 		bottom: -8upx;
 		font-size: 38upx;
 		color: orange;
-
-
-
-
 		.lj_tag_vip {
 			width: 30upx;
 			height: 30upx;
@@ -176,7 +167,6 @@
 			border-radius: 50%;
 		}
 	}
-
 	.cu-card .article .no-card .ljCuCard>.cu-item>.title>.text-cut {
 		font-weight: normal;
 		color: red;
