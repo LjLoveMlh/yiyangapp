@@ -4,7 +4,8 @@
 			<view class="ljIconTextAll margin-right-sm">
 				<!--添加关注入口 -->
 				<view class="ljIconTextItem text-center margin-left-lg" @tap="goToPageAddFollow">
-					<view class="cu-avatar lj_lg round lj_margin_auto " style="background-image:url('/static/img/attention/icon_attention_add@3x.png')">
+					<view class="cu-avatar lj_lg round lj_margin_auto ljAdd">
+						<image src="/static/img/attention/icon_attention_add@3x.png" />
 					</view>
 					<view class="text-sm text-black margin-top-xs">添加关注</view>
 				</view>
@@ -45,7 +46,7 @@
 		methods: {
 			goToPageAddFollow() {
 				uni.navigateTo({
-			url:'/pages/tabbar-2-detail/pageAddFollow/pageAddFollow'
+					url: '/pages/tabbar-2-detail/pageAddFollow/pageAddFollow'
 				})
 			}
 
@@ -93,5 +94,17 @@
 			border: 2upx solid white;
 			border-radius: 50%;
 		}
+	}
+
+	.ljAdd {
+		width: 96upx;
+		height: 96upx;
+
+		image {
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+
 	}
 </style>

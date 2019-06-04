@@ -130,7 +130,7 @@ var _default2 =
   name: "selfUserOverCard",
   props: {
     datalist: {
-      type: Array,
+      type: [Array, Object],
       default: function _default() {return [];} } },
 
 

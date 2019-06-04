@@ -1,0 +1,6 @@
+{
+  "titleNView": false,
+  "usingComponents": {
+    "ly-markdown": "/components/ly-markdown/ly-markdown"
+  }
+}

@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -136,13 +136,20 @@ var _default2 =
   name: "selUserCard",
   props: {
     datalist: {
-      type: Array,
+      type: [Array, Object],
       default: function _default() {return [];} } },
 
 
   created: function created() {
 
-  } };exports.default = _default2;
+  },
+  methods: {
+    goToPageLogin: function goToPageLogin() {
+      uni.navigateTo({
+        url: '/pages/commonPage/pageUserLogin/pageUserLogin' });
+
+    } } };exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

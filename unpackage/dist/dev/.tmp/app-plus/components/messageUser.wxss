@@ -72,7 +72,7 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         line-clamp: 2;
-        height: 60rpx;
+        height: 70rpx;
         text-indent: 2em;
         -o-text-overflow: clip !important;
            text-overflow: clip !important;

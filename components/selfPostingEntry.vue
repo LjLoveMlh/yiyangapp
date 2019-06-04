@@ -56,7 +56,10 @@
 					uni.navigateTo({
 						url: '/pages/tabbar-3-detial/pageWriteNews/pageWriteNews'
 					});
-
+				}else if(e=='写文章'){
+					uni.navigateTo({
+						url: '/pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle'
+					});
 				}
 				// console.log(e)
 			}

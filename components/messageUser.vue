@@ -29,7 +29,6 @@
 					<view class="ljCommentAll padding-lr text-df bg-white padding-bottom-sm">
 						<view class="ljUserCommentText text-df padding-bottom-xs text-cut ">
 							我是评论内容我是评论内容我是评论内容我是评论内容 我是评论内容我是评论内容我是评论内容我是评论内容
-
 						</view>
 						<view class="ljUserArticleAll">
 							<view class="articleImg">
@@ -131,7 +130,7 @@
 					display: -webkit-box;
 					-webkit-line-clamp: 2;
 					line-clamp: 2;
-					height: 60upx;
+					height: 70upx;
 					text-indent: 2em;
 					text-overflow: clip !important;
 				}

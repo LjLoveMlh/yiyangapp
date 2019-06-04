@@ -1,0 +1,1 @@
+<view class="bg-white" bind:__l="__l"><self-common-l-r-header datalist="{{headerList}}"></self-common-l-r-header><self-common-l-rform></self-common-l-rform><self-common-third-login></self-common-third-login></view>

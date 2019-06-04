@@ -30,7 +30,7 @@
 		name: "selfUserOverCard",
 		props: {
 			datalist: {
-				type: Array,
+				type: [Array,Object],
 				default: () => []
 			}
 		},

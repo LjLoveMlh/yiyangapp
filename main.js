@@ -8,6 +8,9 @@ uniFly.headers['Content-Type'] = 'application/x-www-form-urlencoded';
 
 
 
+import cuCustom from '@/colorui/components/cu-custom.vue'
+Vue.component('cu-custom',cuCustom)
+
 
 
 Vue.prototype.uniFly=uniFly

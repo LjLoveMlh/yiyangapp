@@ -1,34 +1,32 @@
 <template>
 	<view class="bg-white">
 		<!-- 个人信息 顶部 -->
-	
-			<view class="top_bg">
+		<view class="top_bg">
+		</view>
+		<!-- 状态栏填充 -->
+		<view class="nav_bar"></view>
+		<!-- 导航栏 -->
+		<view class="cu-bar  search">
+			<view></view>
+			<view class="content text-white text-df text-bold">
+				个人中心
 			</view>
-			<!-- 状态栏填充 -->
-			<view class="nav_bar"></view>
-			<!-- 导航栏 -->
-			<view class="cu-bar  search">
-				<view></view>
-				<view class="content text-white text-df text-bold">
-					个人中心
-				</view>
-				<view class="action">
-					<text class="cuIcon-settingsfill text-white text-lg"></text>
-				</view>
+			<view class="action">
+				<text class="cuIcon-settingsfill text-white text-lg"></text>
 			</view>
+		</view>
 
-			<view class="wrap_top  ">
-				<!-- 用户信息卡片 -->
-				<selfUserCard :datalist='userCenterData.userInfo' />
+		<view class="wrap_top  ">
+			<!-- 用户信息卡片 -->
+			<selfUserCard  :datalist='userCenterData.userInfo' />
 
+			<!-- 层叠卡片 -->
+			<selfUserOverCard :datalist='userCenterData.overCard' />
+		</view>
 
-				<!-- 层叠卡片 -->
-				<selfUserOverCard :datalist='userCenterData.overCard' />
-			</view>
+		<!--功能面板2行4列-->
+		<selfUserFunList :datalist='userCenterData.funList' />
 
-			<!--功能面板2行4列-->
-			<selfUserFunList :datalist='userCenterData.funList' />
-	
 
 	</view>
 </template>
@@ -85,6 +83,7 @@
 <style lang="scss">
 	page {
 		background-color: #fff;
+
 		// 头部整体
 		.top_bg {
 			background: red;

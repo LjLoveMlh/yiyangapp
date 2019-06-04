@@ -1,0 +1,9 @@
+{
+  "titleNView": false,
+  "usingComponents": {
+    "self-common-l-r-header": "/components/selfCommonLRHeader",
+    "self-common-l-rform": "/components/selfCommonLRform",
+    "self-common-third-login": "/components/selfCommonThirdLogin",
+    "self-common-login-button": "/components/selfCommonLoginButton"
+  }
+}

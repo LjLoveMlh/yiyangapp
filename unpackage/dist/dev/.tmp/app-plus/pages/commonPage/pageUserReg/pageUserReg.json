@@ -1,0 +1,7 @@
+{
+  "titleNView": false,
+  "usingComponents": {
+    "self-common-l-r-header": "/components/selfCommonLRHeader",
+    "self-common-login-by-a-p": "/components/selfCommonLoginByAP"
+  }
+}

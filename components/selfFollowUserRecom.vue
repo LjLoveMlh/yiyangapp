@@ -28,7 +28,6 @@
 					</button>
 				</view>
 			</block>
-			
 		</view>
 	</view>
 </template>

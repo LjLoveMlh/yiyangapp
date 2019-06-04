@@ -34,12 +34,12 @@
 		},
 		{
 			"path": "pages/tabbar/tabbar-5/tabbar-5",
-			"style": {	
+			"style": {
 				"navigationBarTitleText": "个人中心",
-					"app-plus": {
+				"app-plus": {
 					"titleNView": false
 				}
-				}
+			}
 		},
 		{
 			"path": "pages/tabbar-3-detial/tabbar-3-release/tabbar-3-release",
@@ -53,18 +53,46 @@
 			"path": "pages/tabbar-3-detial/tabbar-3-qa/tabbar-3-qa",
 			"style": {}
 		}
-	 
-        ,{
-            "path" : "pages/tabbar-2-detail/pageAddFollow/pageAddFollow",
-            "style" : {
-				"navigationBarTitleText":"添加关注"
-				
+
+		, {
+			"path": "pages/tabbar-2-detail/pageAddFollow/pageAddFollow",
+			"style": {
+				"navigationBarTitleText": "添加关注"
+
 			}
-        }
-        ,{
-            "path" : "pages/tabbar-3-detial/pageWriteNews/pageWriteNews",
+		}, {
+			"path": "pages/tabbar-3-detial/pageWriteNews/pageWriteNews",
+			"style": {
+				"navigationBarTitleText": "爆好料"
+			}
+		}, {
+			"path": "pages/commonPage/pageUserLogin/pageUserLogin",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/commonPage/pageUserReg/pageUserReg",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/commonPage/pageUserLogin/pageUserLoginBYAP/pageUserLoginBYAP",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle",
             "style" : {
-				"navigationBarTitleText":"爆好料"
+				"app-plus": {
+					"titleNView": false
+				}
 			}
         }
     ],

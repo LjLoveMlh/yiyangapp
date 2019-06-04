@@ -24,13 +24,46 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.ljTextAreaFa.data-v-12b54e5b {
-  padding-top: 100rpx;
+page {
+  background-color: #fff;
 }
-.ljTextAreaFa .ljTextArea.data-v-12b54e5b {
+.ljInputPhoneN {
+  margin-right: 28rpx;
+}
+.ljUserXy {
+  text-decoration: underline;
+}
+.lj_cu-btn {
+  border-radius: 4rpx;
+}
+.ljsolid-bottom {
+  border-bottom: 1px solid #eee;
+}
+.ljPawd {
+  width: 45rpx;
+  height: 45rpx;
+  margin-top: 10rpx;
+  padding-top: 4rpx;
+}
+.ljPawd image {
     width: 100%;
+    height: 100%;
 }
-.ljTextAreaFa .textPlaceHolder.data-v-12b54e5b {
-    font-size: 24rpx;
+.ljBottomButton {
+  left: 0;
+  right: 0;
+  font-size: 28rpx;
+  position: fixed;
+  bottom: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.ljBottomButton .ljButtHelp {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
 }
 

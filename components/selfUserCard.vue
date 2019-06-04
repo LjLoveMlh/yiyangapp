@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<view class="cu-list menu-avatar ">
+		<view class="cu-list menu-avatar " @tap="goToPageLogin">
 			<view class="cu-item ">
 				<view class="cu-avatar round lg ljAvatar"  :style="{'background-image':'url('+datalist.avatar+')'}">
 					<view class="pic-zi ">
@@ -36,13 +36,21 @@
 		name: "selUserCard",
 		props: {
 			datalist: {
-				type: Array,
+				type: [Array,Object],
 				default: () => []
 			}
 		},
 		created() {
 
+		},
+		methods:{
+			goToPageLogin(){
+				uni.navigateTo({
+					url:'/pages/commonPage/pageUserLogin/pageUserLogin'
+				})
+			}
 		}
+		
 	}
 </script>
 
