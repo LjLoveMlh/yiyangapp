@@ -138,11 +138,16 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 //
 //
 //
+//
+//
 var _default =
 {
   data: function data() {
-    return {};
-
+    return {
+      value_phone: "",
+      value_token: "",
+      isFocus_phone: false,
+      isFocus_token: false };
 
   },
   name: "selfCommonLRform",
@@ -154,7 +159,16 @@ var _default =
   },
   created: function created() {
 
-  } };exports.default = _default;
+  },
+  methods: {
+    phoneInput: function phoneInput(e) {
+      this.isFocus_phone = true;
+      this.value_phone = e.detail.value;
+    },
+    tokenInput: function tokenInput(e) {
+      this.isFocus_token = true;
+      this.value_token = e.detail.value;
+    } } };exports.default = _default;
 
 /***/ }),
 

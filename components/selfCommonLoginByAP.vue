@@ -88,7 +88,6 @@
 			// 密码可见不可见
 			changeEyeStatus() {
 				this.isEyeOn = !this.isEyeOn;
-
 			},
 			phoneOrEmailInput(e) {
 				this.user_account = e.detail.value;
@@ -97,7 +96,6 @@
 				} else {
 					this.UA_emptyHidden = true;
 				}
-
 			},
 			paswdInput(e) {
 				this.user_paswd = e.detail.value;
@@ -181,7 +179,7 @@
 		bottom: 0;
 		display: flex;
 		width: 100%;
-		height: 44px;
+		height: 50px;
 		.ljButtHelp {
 			width: 100%;
 			height: 100%;

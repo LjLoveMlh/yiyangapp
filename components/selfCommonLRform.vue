@@ -5,7 +5,8 @@
 			<view class="margin">
 				<view class="flex  align-center">
 					<view class="flex-twice padding-bottom-sm ljsolid-bottom ljInputPhoneN">
-						<input placeholder="请输入手机号码" name="input" placeholder-class="text-gray"></input>
+						<input placeholder="请输入手机号码" :focus="isFocus_phone" name="input" @input="phoneInput" :value="value_phone"
+						 placeholder-class="text-gray"></input>
 					</view>
 					<view class="flex-sub">
 						<button class='cu-btn lj_cu-btn bg-red '>获取验证码</button>
@@ -15,7 +16,8 @@
 				<view class="flex  align-center margin-top-sm">
 					<view class="flex-sub padding-bottom-sm ljsolid-bottom ljInputPhoneN">
 
-						<input placeholder="请输入验证码" name="input" placeholder-class="text-gray"></input>
+						<input placeholder="请输入验证码" @input="tokenInput" :value="value_token" :focus="isFocus_token" name="input"
+						 placeholder-class="text-gray"></input>
 					</view>
 
 				</view>
@@ -42,7 +44,10 @@
 	export default {
 		data() {
 			return {
-
+				value_phone: "",
+				value_token: "",
+				isFocus_phone: false,
+				isFocus_token: false
 			};
 		},
 		name: "selfCommonLRform",
@@ -54,6 +59,16 @@
 		},
 		created() {
 
+		},
+		methods: {
+			phoneInput(e) {
+				this.isFocus_phone=true;
+				this.value_phone = e.detail.value;
+			},
+			tokenInput(e) {
+				this.isFocus_token=true;
+				this.value_token = e.detail.value;
+			}
 		}
 	}
 </script>
@@ -88,7 +103,8 @@
 		bottom: 0;
 		display: flex;
 		width: 100%;
-		height: 44px;
+		height: 50px;
+
 		.ljButtHelp {
 			width: 100%;
 			height: 100%;

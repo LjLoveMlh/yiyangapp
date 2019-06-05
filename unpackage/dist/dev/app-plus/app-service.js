@@ -18357,7 +18357,6 @@ define('components/selfCommonLoginByAP.js',function(require, module, exports, wi
           // 密码可见不可见
           changeEyeStatus: function changeEyeStatus() {
             this.isEyeOn = !this.isEyeOn;
-
           },
           phoneOrEmailInput: function phoneOrEmailInput(e) {
             this.user_account = e.detail.value;
@@ -18366,7 +18365,6 @@ define('components/selfCommonLoginByAP.js',function(require, module, exports, wi
             } else {
               this.UA_emptyHidden = true;
             }
-
           },
           paswdInput: function paswdInput(e) {
             this.user_paswd = e.detail.value;
@@ -18379,7 +18377,7 @@ define('components/selfCommonLoginByAP.js',function(require, module, exports, wi
             if (this.user_account.length > 0 && this.user_paswd.length > 0) {
 
               this.enableLogin = true;
-              console.log(this.enableLogin, " at components\\selfCommonLoginByAP.vue:113");
+              console.log(this.enableLogin, " at components\\selfCommonLoginByAP.vue:111");
             } else {
               this.enableLogin = false;
             }
@@ -18592,11 +18590,16 @@ define('components/selfCommonLRform.js',function(require, module, exports, windo
     //
     //
     //
+    //
+    //
     var _default =
     {
       data: function data() {
-        return {};
-
+        return {
+          value_phone: "",
+          value_token: "",
+          isFocus_phone: false,
+          isFocus_token: false };
 
       },
       name: "selfCommonLRform",
@@ -18608,7 +18611,16 @@ define('components/selfCommonLRform.js',function(require, module, exports, windo
       },
       created: function created() {
 
-      } };exports.default = _default;
+      },
+      methods: {
+        phoneInput: function phoneInput(e) {
+          this.isFocus_phone = true;
+          this.value_phone = e.detail.value;
+        },
+        tokenInput: function tokenInput(e) {
+          this.isFocus_token = true;
+          this.value_token = e.detail.value;
+        } } };exports.default = _default;
 
     /***/},
 

@@ -188,7 +188,6 @@ var _default =
     // 密码可见不可见
     changeEyeStatus: function changeEyeStatus() {
       this.isEyeOn = !this.isEyeOn;
-
     },
     phoneOrEmailInput: function phoneOrEmailInput(e) {
       this.user_account = e.detail.value;
@@ -197,7 +196,6 @@ var _default =
       } else {
         this.UA_emptyHidden = true;
       }
-
     },
     paswdInput: function paswdInput(e) {
       this.user_paswd = e.detail.value;
@@ -210,7 +208,7 @@ var _default =
       if (this.user_account.length > 0 && this.user_paswd.length > 0) {
 
         this.enableLogin = true;
-        console.log(this.enableLogin, " at components\\selfCommonLoginByAP.vue:113");
+        console.log(this.enableLogin, " at components\\selfCommonLoginByAP.vue:111");
       } else {
         this.enableLogin = false;
       }
