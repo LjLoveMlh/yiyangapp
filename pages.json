@@ -86,14 +86,58 @@
 					"titleNView": false
 				}
 			}
-		}
-	    ,{
-            "path" : "pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle",
-            "style" : {
+		}, {
+			"path": "pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle",
+			"style": {
 				"app-plus": {
 					"titleNView": false
 				}
 			}
+		}, {
+			"path": "pages/tabbar-1-detail/pageIndexSearch/pageIndexSearch",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle",
+            "style" : {
+					"navigationBarTitleText": "我的文章"
+			}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyBHL/pageMyBHL",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyInvite/pageMyInvite",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyService/pageMyService",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyAbout/pageMyAbout",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyFollow/pageMyFollow",
+            "style" : {"navigationBarTitleText": "关注管理"}
         }
     ],
 	"globalStyle": {

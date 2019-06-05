@@ -165,10 +165,10 @@ var _default =
     },
     DelImg: function DelImg(e) {var _this2 = this;
       uni.showModal({
-        title: '召唤师',
-        content: '确定要删除这段回忆吗？',
-        cancelText: '再看看',
-        confirmText: '再见',
+        title: '提示',
+        content: '确定删除该图片吗',
+        cancelText: '点错了',
+        confirmText: '确定删除',
         success: function success(res) {
           if (res.confirm) {
             _this2.imgList.splice(e.currentTarget.dataset.index, 1);

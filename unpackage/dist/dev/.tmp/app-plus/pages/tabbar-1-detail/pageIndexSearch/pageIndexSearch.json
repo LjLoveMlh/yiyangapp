@@ -1,0 +1,7 @@
+{
+  "titleNView": false,
+  "usingComponents": {
+    "self-index-search-bar": "/components/selfIndexSearchBar",
+    "self-tab-nav": "/components/selfTabNav"
+  }
+}

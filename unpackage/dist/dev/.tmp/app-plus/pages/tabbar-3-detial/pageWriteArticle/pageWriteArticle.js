@@ -151,6 +151,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
 {
   components: {
     lyMarkdown: lyMarkdown },
@@ -167,9 +170,8 @@ __webpack_require__.r(__webpack_exports__);
       isfocus: false,
 
       classIndex: -1,
-      topicIndex: -1,
-      pickerClass: ['', '京东', '淘宝', '拼多多'],
-      pickerTopic: ['', '值得买', '好物分享', '白菜折扣价'] };
+      pickerClass: ['', '经验', '晒单'] };
+
 
   },
   watch: {
@@ -196,10 +198,6 @@ __webpack_require__.r(__webpack_exports__);
     // 选择分类
     PickerChangeClass: function PickerChangeClass(e) {
       this.classIndex = e.detail.value;
-    },
-    // 选择话题
-    PickerChangeTopic: function PickerChangeTopic(e) {
-      this.topicIndex = e.detail.value;
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

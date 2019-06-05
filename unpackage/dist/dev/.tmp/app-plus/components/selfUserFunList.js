@@ -98,7 +98,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -129,7 +129,53 @@ var _default2 =
 
   created: function created() {
 
-  } };exports.default = _default2;
+  },
+  methods: {
+    goToPage: function goToPage(e) {
+
+      switch (e) {
+        case '我的文章':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle' });
+
+          break;
+        case '我的评论':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment' });
+
+          break;
+        case '我的点赞':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb' });
+
+          break;
+        case '我的爆料':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyBHL/pageMyBHL' });
+
+          break;
+        case '邀请有利':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyInvite/pageMyInvite' });
+
+          break;
+        case '我要赚钱':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney' });
+
+          break;
+        case '联系客服':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyService/pageMyService' });
+
+          break;
+        case '关于我们':
+          uni.navigateTo({
+            url: '/pages/tabbar-5-detail/pageMyAbout/pageMyAbout' });}
+
+
+    } } };exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

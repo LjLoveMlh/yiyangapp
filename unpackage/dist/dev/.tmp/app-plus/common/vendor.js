@@ -2411,6 +2411,23 @@ createPage(_tabbar.default);
 
 /***/ }),
 
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-1-detail%2FpageIndexSearch%2FpageIndexSearch\"}":
+/*!*********************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-1-detail%2FpageIndexSearch%2FpageIndexSearch"} ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageIndexSearch = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-1-detail/pageIndexSearch/pageIndexSearch.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-1-detail/pageIndexSearch/pageIndexSearch.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageIndexSearch.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
 /***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-2-detail%2FpageAddFollow%2FpageAddFollow\"}":
 /*!*****************************************************************************************************************************!*\
   !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-2-detail%2FpageAddFollow%2FpageAddFollow"} ***!
@@ -2509,6 +2526,159 @@ createPage(_tabbar3Release.default);
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
 var _tabbar3Video = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-3-detial/tabbar-3-video/tabbar-3-video.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_tabbar3Video.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyAbout%2FpageMyAbout\"}":
+/*!*************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyAbout%2FpageMyAbout"} ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyAbout = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyAbout/pageMyAbout.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyAbout/pageMyAbout.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyAbout.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyBHL%2FpageMyBHL\"}":
+/*!*********************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyBHL%2FpageMyBHL"} ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyBHL = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyBHL/pageMyBHL.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyBHL/pageMyBHL.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyBHL.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyEarnMoney%2FpageMyEarnMoney\"}":
+/*!*********************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyEarnMoney%2FpageMyEarnMoney"} ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyEarnMoney = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyEarnMoney.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyFollow%2FpageMyFollow\"}":
+/*!***************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyFollow%2FpageMyFollow"} ***!
+  \***************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyFollow = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyFollow/pageMyFollow.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyFollow/pageMyFollow.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyFollow.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyInvite%2FpageMyInvite\"}":
+/*!***************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyInvite%2FpageMyInvite"} ***!
+  \***************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyInvite = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyInvite/pageMyInvite.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyInvite/pageMyInvite.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyInvite.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyMyArtilcle%2FpageMyMyArtilcle\"}":
+/*!***********************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyMyArtilcle%2FpageMyMyArtilcle"} ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyMyArtilcle = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyMyArtilcle.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyMyComment%2FpageMyMyComment\"}":
+/*!*********************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyMyComment%2FpageMyMyComment"} ***!
+  \*********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyMyComment = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyMyComment.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FpageMyService%2FpageMyService\"}":
+/*!*****************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FpageMyService%2FpageMyService"} ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _pageMyService = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/pageMyService/pageMyService.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/pageMyService/pageMyService.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_pageMyService.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
+
+/***/ }),
+
+/***/ "../../../../ProjectAbout/yiyangapp/main.js?{\"page\":\"pages%2Ftabbar-5-detail%2FselfMyMyThumb%2FselfMyMyThumb\"}":
+/*!*****************************************************************************************************************************!*\
+  !*** E:/DevelopmentAbout/ProjectAbout/yiyangapp/main.js?{"page":"pages%2Ftabbar-5-detail%2FselfMyMyThumb%2FselfMyMyThumb"} ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ "../../../../ProjectAbout/yiyangapp/pages.json");
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ "./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mp-vue/dist/mp.runtime.esm.js"));
+var _selfMyMyThumb = _interopRequireDefault(__webpack_require__(/*! ./pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb.vue */ "../../../../ProjectAbout/yiyangapp/pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_selfMyMyThumb.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["createPage"]))
 
 /***/ }),
@@ -3786,7 +3956,7 @@ function getData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -9860,7 +10030,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -9881,14 +10051,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9957,7 +10127,7 @@ var patch = function(oldVnode, vnode) {
         });
         var diffData = diff(data, mpData);
         if (Object.keys(diffData).length) {
-            if (Object({"VUE_APP_PLATFORM":"app-plus","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
+            if (Object({"NODE_ENV":"development","VUE_APP_PLATFORM":"app-plus","BASE_URL":"/"}).VUE_APP_DEBUG) {
                 console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
                     ']差量更新',
                     JSON.stringify(diffData));

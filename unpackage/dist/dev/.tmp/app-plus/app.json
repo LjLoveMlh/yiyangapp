@@ -13,7 +13,17 @@
     "pages/commonPage/pageUserLogin/pageUserLogin",
     "pages/commonPage/pageUserReg/pageUserReg",
     "pages/commonPage/pageUserLogin/pageUserLoginBYAP/pageUserLoginBYAP",
-    "pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle"
+    "pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle",
+    "pages/tabbar-1-detail/pageIndexSearch/pageIndexSearch",
+    "pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle",
+    "pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment",
+    "pages/tabbar-5-detail/pageMyBHL/pageMyBHL",
+    "pages/tabbar-5-detail/pageMyInvite/pageMyInvite",
+    "pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney",
+    "pages/tabbar-5-detail/pageMyService/pageMyService",
+    "pages/tabbar-5-detail/pageMyAbout/pageMyAbout",
+    "pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb",
+    "pages/tabbar-5-detail/pageMyFollow/pageMyFollow"
   ],
   "subPackages": [],
   "window": {

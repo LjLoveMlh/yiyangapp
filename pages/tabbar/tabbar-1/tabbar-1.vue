@@ -2,7 +2,7 @@
 	<view class="bg-gray">
 		<view class="nav_bar"></view>
 		<!-- 搜索框 -->
-		<view class="cu-bar search bg-white index_search">
+		<view class="cu-bar search bg-white index_search" @tap="goToSearchPage">
 			<view class="search-form round ">
 				<view class="margin-left-lg text-gray">复制宝贝标题查找优惠券</view>
 			</view>
@@ -17,11 +17,7 @@
 		<!-- 四张图片比例布局 -->
 		<selfFourAdver :datalist='fourAdverList' />
 		<!-- 选项卡导航 -->
-		<scroll-view 
-			scroll-x 
-			class="bg-white nav margin-top-xs solids-bottom class_in" 
-			scroll-with-animation 
-			:scroll-left="scrollLeft">
+		<scroll-view scroll-x class="bg-white nav margin-top-xs solids-bottom class_in" scroll-with-animation :scroll-left="scrollLeft">
 			<view class="cu-item text-df" :class="index==TabCur?'text-red ':''" v-for="(item,index) in class_nav" :key="index"
 			 @tap="tabSelect(index)">
 				{{item.text}}
@@ -33,9 +29,7 @@
 				<userArticleItem :datalist="userItem" />
 			</block>
 			<!-- 正常的话应该是写再user Article中 -->
-			<view 
-				v-for="(item, index) in newsList" 
-				:key="index">
+			<view v-for="(item, index) in newsList" :key="index">
 				{{item}}
 			</view>
 			<uni-load-more :loadingType="loadingType" :contentText="contentText">
@@ -101,7 +95,12 @@
 			}
 		},
 		methods: {
-
+			// 跳转搜索界面
+			goToSearchPage() {
+			uni.navigateTo({
+				url:'/pages/tabbar-1-detail/pageIndexSearch/pageIndexSearch'
+			})
+			},
 			// 轮播图
 			DotStyle(e) {
 				this.dotStyle = e.detail.value
@@ -116,7 +115,7 @@
 
 			// 选项卡
 			tabSelect(index) {
-				this.TabCur =index;
+				this.TabCur = index;
 				this.scrollLeft = (index - 1) * 60
 			},
 

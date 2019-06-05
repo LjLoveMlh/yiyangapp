@@ -2,15 +2,18 @@
 export default {
 	onLaunch: function() {
 		console.log('App Launch');
-		setTimeout(() => {
-			uni.setTabBarBadge({
-				index: 1,
-				text: '31'
-			});
-			uni.showTabBarRedDot({
-				index: 3
-			});
-		}, 1000);
+		// setTimeout(() => {
+		// 	uni.setTabBarBadge({
+		// 		index: 1,
+		// 		text: '31'
+		// 	});
+		// 	uni.showTabBarRedDot({
+		// 		index: 3
+		// 	});
+		// }, 1000);
+		// 
+		
+		
 	},
 	onShow: function() {
 		console.log('App Show');
@@ -24,13 +27,17 @@ export default {
 <style>
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
-
+page{
+	background-color: #fff;
+}
 
 .PH_articleTitle{
 
 		font-size: 40upx;
 		font-weight: bold;
-		color: red;
+		color: #ccc;
+		
+		
 	
 }
 

@@ -4950,11 +4950,14 @@ scroll-view.cu-steps .cu-item {
 .cuIcon-btn:before {
 	content: "\E601";
 }
+page{
+	background-color: #fff;
+}
 .PH_articleTitle{
 
 		font-size: 40rpx;
 		font-weight: bold;
-		color: red;
+		color: #ccc;
 }
 
 /*每个页面公共css */ 

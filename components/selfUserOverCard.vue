@@ -6,7 +6,7 @@
 					<view class="text-bold">{{datalist.countLeft}}</view>
 					<view class="padding-top-xs text-sm ">{{datalist.textLeft}}</view>
 				</view>
-				<view class="user flex-sub solid-left solid-right">
+				<view class="user flex-sub solid-left solid-right" @tap="goToFollowPage">
 					<view class="text-bold">{{datalist.countCenter}}</view>
 					<view class="padding-top-xs text-sm ">{{datalist.textCenter}}</view>
 				</view>
@@ -36,6 +36,13 @@
 		},
 		created() {
 		
+		},
+		methods:{
+			goToFollowPage(){
+				uni.navigateTo({
+					url:'/pages/tabbar-5-detail/pageMyFollow/pageMyFollow'
+				})
+			}
 		}
 	}
 </script>

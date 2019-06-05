@@ -17,10 +17,10 @@
 
 
 		<!--标题输入  -->
-		<view class="bg-white ">
-			<view class="ljTextAreaFa padding-tb-lg margin-lr   padding-bottom-sm " @tap="focusipt">
-				<view class="margin-lr-xs solid-bottom padding-bottom-sm solids">
-					<textarea @input="textareaAInput" placeholder-class='PH_articleTitle' :focus="isfocus" class="ljTextArea align-center  solids"
+		<view class="bg-white solids-bottom ">
+			<view class="ljTextAreaFa padding-top margin-lr   solid-top  " @tap="focusipt">
+				<view class="margin-lr-xs solid-bottom  padding-bottom-sm">
+					<textarea @input="textareaAInput" placeholder-class='PH_articleTitle' :focus="isfocus" class="ljTextArea  align-center  "
 					 auto-height='true' maxlength="35" placeholder="输入标题18字左右阅读体验最佳" rows=1 name=s1 cols=2 onpropertychange="this.style.posHeight=this.scrollHeight "></textarea>
 					<view class="text-right margin-top-sm text-sm">你还能输入<text class="text-red">35</text>字</view>
 				</view>
@@ -28,13 +28,12 @@
 			</view>
 		</view>
 
-
 		<!-- 分类选择 -->
-		<view class="cu-form-group " style="border-top: none;">
-			<view class="title">选择话题</view>
-			<picker @change="PickerChangeTopic" :value="topicIndex" :range="pickerTopic">
-				<view class="picker " :class="topicIndex>-1?'':'text-gray'">
-					{{topicIndex>-1?pickerTopic[topicIndex]:'请选择话题'}}
+		<view class="cu-form-group  ">
+			<view class="title">选择分类</view>
+			<picker @change="PickerChangeClass" :value="classIndex" :range="pickerClass">
+				<view class="picker " :class="classIndex>-1?'':'text-gray'">
+					{{classIndex>-1?pickerClass[classIndex]:'请选择话题'}}
 				</view>
 
 			</picker>
@@ -46,6 +45,10 @@
 			<ly-markdown :showPreview="showPreview" :textareaData.sync="textareaData" :textareaHtml.sync="textareaHtml"></ly-markdown>
 		</view>
 
+
+
+
+	
 	</view>
 </template>
 
@@ -67,9 +70,8 @@
 				isfocus: false,
 
 				classIndex: -1,
-				topicIndex: -1,
-				pickerClass: ['', '京东', '淘宝', '拼多多'],
-				pickerTopic: ['', '值得买', '好物分享', '白菜折扣价'],
+				pickerClass: ['', '经验', '晒单'],
+
 			};
 		},
 		watch: {
@@ -96,11 +98,8 @@
 			// 选择分类
 			PickerChangeClass(e) {
 				this.classIndex = e.detail.value
-			},
-			// 选择话题
-			PickerChangeTopic(e) {
-				this.topicIndex = e.detail.value
 			}
+
 		}
 	}
 </script>
@@ -128,11 +127,13 @@
 	// 顶部textArea
 	.ljTextAreaFa {
 		// padding-top: 80upx;
-		height: 50upx;
+
 
 		.ljTextArea {
 			width: 100%;
-
+			font-size: 40upx;
+			font-weight: bold;
+			height: 80upx;
 		}
 
 
@@ -179,4 +180,7 @@
 		line-height: 2.2;
 		vertical-align: middle;
 	}
+	
+	
+
 </style>

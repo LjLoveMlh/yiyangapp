@@ -79,27 +79,29 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
 {
   onLaunch: function onLaunch() {
     console.log('App Launch', " at App.vue:4");
-    setTimeout(function () {
-      uni.setTabBarBadge({
-        index: 1,
-        text: '31' });
+    // setTimeout(() => {
+    // 	uni.setTabBarBadge({
+    // 		index: 1,
+    // 		text: '31'
+    // 	});
+    // 	uni.showTabBarRedDot({
+    // 		index: 3
+    // 	});
+    // }, 1000);
+    // 
 
-      uni.showTabBarRedDot({
-        index: 3 });
 
-    }, 1000);
   },
   onShow: function onShow() {
-    console.log('App Show', " at App.vue:16");
+    console.log('App Show', " at App.vue:19");
   },
   onHide: function onHide() {
-    console.log('App Hide', " at App.vue:19");
+    console.log('App Hide', " at App.vue:22");
   } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

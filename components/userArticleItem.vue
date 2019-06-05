@@ -6,8 +6,9 @@
 				<view class="cu-item">
 					<view class="cu-avatar round lg" :style="{'background-image':'url('+datalist.avatar+')'}">
 						<view class="pic-zi ">
-							<image class="lj_tag_vip" src="/static/img/vip/vip_red.png">
-							</image>
+							<image class="lj_tag_vip" v-if="datalist.level==0" src='/static/img/vip/vip_blue.png'></image>
+							<image class="lj_tag_vip" v-if="datalist.level==1" src='/static/img/vip/vip_yellow.png'></image>	
+							<image class="lj_tag_vip" v-if="datalist.level==2" src='/static/img/vip/vip_red.png'></image>
 						</view>
 					</view>
 					<view class="content flex-sub">
@@ -63,7 +64,7 @@
 	export default {
 		data() {
 			return {
-
+			basicLevelUrl:'/static/img/vip/'
 			}
 		},
 

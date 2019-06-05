@@ -152,12 +152,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
-
-
 // 定义全局参数,控制数据加载
 var _self,
 page = 1,
@@ -201,7 +195,12 @@ timer = null;var _default =
 
   },
   methods: {
+    // 跳转搜索界面
+    goToSearchPage: function goToSearchPage() {
+      uni.navigateTo({
+        url: '/pages/tabbar-1-detail/pageIndexSearch/pageIndexSearch' });
 
+    },
     // 轮播图
     DotStyle: function DotStyle(e) {
       this.dotStyle = e.detail.value;
