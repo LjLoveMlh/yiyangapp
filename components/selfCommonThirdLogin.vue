@@ -49,11 +49,9 @@
 	// 第三方登录
 
 	.ljQuickLogin {
-
-		padding-top: 50%;
-		padding-bottom: 30%;
-
-
+		position: absolute;
+		bottom:66px;
+		width: 100%;
 		.quick_login_line {
 			margin-top: 40px;
 			display: flex;

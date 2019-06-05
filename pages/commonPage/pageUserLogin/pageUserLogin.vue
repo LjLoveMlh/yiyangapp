@@ -1,5 +1,5 @@
 <template>
-	<view class='bg-white'>
+	<view class='bg-white login_page'>
 		<!-- 头部 背景-->
 		<selfCommonLRHeader :datalist='headerList' />
 		<!-- 表单部分 -->
@@ -48,5 +48,17 @@
 </script>
 
 <style lang="scss">
-	
+	page{
+		height: 100%;
+	}
+.login_page{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	padding-bottom: 60px;
+	box-sizing: border-box;
+}
 </style>

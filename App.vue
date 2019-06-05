@@ -25,5 +25,14 @@ export default {
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
 
+
+.PH_articleTitle{
+
+		font-size: 40upx;
+		font-weight: bold;
+		color: red;
+	
+}
+
 /*每个页面公共css */ 
 </style>

@@ -2,7 +2,7 @@
 	<view>
 			<!-- 底部登录按钮 -->
 	<view class="ljBottomButton  ">
-		<view class=" ljButtHelp flex justify-center bg-grey text-white text-center padding-tb">
+		<view class=" ljButtHelp flex justify-center bg-grey text-white text-center">
 			登录
 		</view>
 	</view>
@@ -29,6 +29,7 @@
 		bottom: 0;
 		display: flex;
 		width: 100%;
+		height: 44px;
 		.ljButtHelp {
 			width: 100%;
 			height: 100%;

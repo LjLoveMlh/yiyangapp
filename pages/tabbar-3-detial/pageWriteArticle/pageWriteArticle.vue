@@ -15,15 +15,13 @@
 			</view>
 		</view>
 
-		<!--标题输入  -->
 
+		<!--标题输入  -->
 		<view class="bg-white ">
 			<view class="ljTextAreaFa padding-tb-lg margin-lr   padding-bottom-sm " @tap="focusipt">
-				<view class="margin-lr-xs solid-bottom padding-bottom-sm">
-					<textarea @input="textareaAInput"  placeholder-class='textPlaceHolder' :focus="isfocus" class="ljTextArea align-center"
-					 auto-height='true' maxlength="-1" placeholder="输入标题18字左右阅读体验最佳" rows=1 name=s1 
-					 cols=2 
-					 onpropertychange="this.style.posHeight=this.scrollHeight "></textarea>
+				<view class="margin-lr-xs solid-bottom padding-bottom-sm solids">
+					<textarea @input="textareaAInput" placeholder-class='PH_articleTitle' :focus="isfocus" class="ljTextArea align-center  solids"
+					 auto-height='true' maxlength="35" placeholder="输入标题18字左右阅读体验最佳" rows=1 name=s1 cols=2 onpropertychange="this.style.posHeight=this.scrollHeight "></textarea>
 					<view class="text-right margin-top-sm text-sm">你还能输入<text class="text-red">35</text>字</view>
 				</view>
 
@@ -31,23 +29,23 @@
 		</view>
 
 
-<!-- 分类选择 -->
-	<view class="cu-form-group " style="border-top: none;">
+		<!-- 分类选择 -->
+		<view class="cu-form-group " style="border-top: none;">
 			<view class="title">选择话题</view>
 			<picker @change="PickerChangeTopic" :value="topicIndex" :range="pickerTopic">
 				<view class="picker " :class="topicIndex>-1?'':'text-gray'">
 					{{topicIndex>-1?pickerTopic[topicIndex]:'请选择话题'}}
 				</view>
-				
+
 			</picker>
 		</view>
-	
+
 
 		<!-- 编辑器 -->
 		<view class="page-body ">
 			<ly-markdown :showPreview="showPreview" :textareaData.sync="textareaData" :textareaHtml.sync="textareaHtml"></ly-markdown>
 		</view>
-		<page-foot :name="name"></page-foot>
+
 	</view>
 </template>
 
@@ -67,11 +65,11 @@
 
 				textareaAValue: null,
 				isfocus: false,
-				
+
 				classIndex: -1,
 				topicIndex: -1,
-				pickerClass: ['','京东', '淘宝', '拼多多'],
-				pickerTopic: ['','值得买', '好物分享', '白菜折扣价'],
+				pickerClass: ['', '京东', '淘宝', '拼多多'],
+				pickerTopic: ['', '值得买', '好物分享', '白菜折扣价'],
 			};
 		},
 		watch: {
@@ -92,10 +90,10 @@
 			textareaAInput(e) {
 				this.textareaAValue = e.detail.value
 			},
-			
-			
-			
-				// 选择分类
+
+
+
+			// 选择分类
 			PickerChangeClass(e) {
 				this.classIndex = e.detail.value
 			},
@@ -108,7 +106,7 @@
 </script>
 
 <style lang="scss" scoped="">
-	// 导航栏
+	// 导航-=
 	.nav_bar {
 		position: sticky;
 		top: 0;
@@ -130,16 +128,14 @@
 	// 顶部textArea
 	.ljTextAreaFa {
 		// padding-top: 80upx;
+		height: 50upx;
 
 		.ljTextArea {
 			width: 100%;
 
 		}
-		.textPlaceHolder {
-			font-size: 50upx;
-			font-weight: bold;
-			color: red;
-		}
+
+
 	}
 
 

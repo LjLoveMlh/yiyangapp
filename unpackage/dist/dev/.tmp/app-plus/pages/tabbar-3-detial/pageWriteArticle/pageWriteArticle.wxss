@@ -38,13 +38,11 @@
 .reNav_bar .ljtext-xl.data-v-1c433b5a {
     font-size: 40rpx;
 }
-.ljTextAreaFa .ljTextArea.data-v-1c433b5a {
-  width: 100%;
+.ljTextAreaFa.data-v-1c433b5a {
+  height: 50rpx;
 }
-.ljTextAreaFa .textPlaceHolder.data-v-1c433b5a {
-  font-size: 50rpx;
-  font-weight: bold;
-  color: red;
+.ljTextAreaFa .ljTextArea.data-v-1c433b5a {
+    width: 100%;
 }
 .input-content.data-v-1c433b5a {
   width: 100%;

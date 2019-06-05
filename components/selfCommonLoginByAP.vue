@@ -181,7 +181,7 @@
 		bottom: 0;
 		display: flex;
 		width: 100%;
-
+		height: 44px;
 		.ljButtHelp {
 			width: 100%;
 			height: 100%;

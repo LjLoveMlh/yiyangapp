@@ -24,42 +24,18 @@
 /* 垂直间距 */
 /* 透明度 */
 /* 文章场景相关 */
-.ljInputPhoneN {
-  margin-right: 28rpx;
+page {
+  height: 100%;
 }
-.ljUserXy {
-  text-decoration: underline;
-}
-.lj_cu-btn {
-  border-radius: 4rpx;
-}
-.ljsolid-bottom {
-  border-bottom: 1px solid #eee;
-}
-.ljBottomButton {
+.login_page {
+  position: relative;
+  top: 0;
   left: 0;
-  right: 0;
-  font-size: 28rpx;
-  position: fixed;
-  bottom: 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  height: 100%;
   width: 100%;
-  height: 44px;
-}
-.ljBottomButton .ljButtHelp {
-    width: 100%;
-    height: 100%;
-    background-color: #ccc;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
+  background: #fff;
+  padding-bottom: 60px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
