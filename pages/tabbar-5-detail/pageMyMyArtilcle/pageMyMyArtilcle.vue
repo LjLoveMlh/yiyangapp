@@ -1,8 +1,8 @@
 <template>
-	<view class="main_content">
+	<view class="main_content bg-gray">
 		<!-- 导航条 -->
-		<selfTabNav :datalist='tabList' />
-		<swiper current="0" class="ljmargin-top-xs" duration="300">
+		<selfTabNav :datalist='tabList' :NavTabCur='cur_swiper' @change="change" />
+		<swiper :current="cur_swiper" @change='swiperChange' class="ljmargin-top-xs" duration="300">
 			<swiper-item>
 				<!-- 文章类型Tab -->
 				<scroll-view scroll-x class="bg-white nav  padding-lr-sm" :scroll-left="scrollLeft" scroll-with-animation>
@@ -16,8 +16,9 @@
 				<!-- 文章item -->
 				<selfMyMyArticleArticleList />
 			</swiper-item>
-			<swiper-item></swiper-item>
-			<swiper-item></swiper-item>
+			<swiper-item>1</swiper-item>
+			<swiper-item>2</swiper-item>
+			<swiper-item>3</swiper-item>
 		</swiper>
 
 		<!-- 悬浮按钮 -->
@@ -44,9 +45,21 @@
 				scrollLeft: 0,
 				tabList: ['文章', '讨论', '好价爆料', '百科点评'],
 				articleTabList: ['全部', '已发布', '待审核', '待修改', '草稿', '未通过', '待修改', '待修改'],
+				cur_swiper: 0
 			};
 		},
 		methods: {
+			swiperChange(e) {
+				// console.log(e)		
+				this.cur_swiper = e.detail.current;
+			},
+
+
+			// 来自子组件得值
+			change(a) {
+				// console.log(a);
+				this.cur_swiper = a;
+			},
 			// 导航条
 			tabSelect(e) {
 				this.TabCur = e.currentTarget.dataset.id;
@@ -57,16 +70,21 @@
 </script>
 
 <style lang="scss" scoped="">
+	page {
+		height: 100%;
+	}
+
 	.main_content {
 		height: 100%;
 	}
+
 	.ljmargin-top-xs {
-		flex: 1;
+		// flex: 1;
 		width: 100%;
-		height: 1000px;
-		// height: calc(100% - 200upx);
+		height: calc(100% - 40px);
 		margin-top: 2upx;
 	}
+
 	.ljCuItemFather {
 		// width: 100%;
 		display: flex;
@@ -75,6 +93,7 @@
 		margin-top: 4upx;
 		// margin-left: 100upx;
 		margin-right: 20upx;
+
 		.ljCuItem {
 			margin: 14upx 10upx;
 			height: 50upx;
@@ -84,6 +103,7 @@
 			border-radius: 4upx;
 		}
 	}
+
 	// 悬浮按钮
 	.circle-float {
 		color: #ffffff;
@@ -96,7 +116,7 @@
 		width: 90rpx;
 		height: 90rpx;
 		border-radius: 50%;
-		font-size: 60rpx;
+		font-size: 65rpx;
 		background: #f43f3b;
 		box-shadow: 0px 5px 10px #bbb;
 	}

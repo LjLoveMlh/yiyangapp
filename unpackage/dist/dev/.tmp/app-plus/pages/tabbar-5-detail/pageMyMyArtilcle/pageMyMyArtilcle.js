@@ -132,6 +132,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
 {
   components: {
     selfTabNav: selfTabNav,
@@ -143,10 +144,22 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       TabCur: 0,
       scrollLeft: 0,
       tabList: ['文章', '讨论', '好价爆料', '百科点评'],
-      articleTabList: ['全部', '已发布', '待审核', '待修改', '草稿', '未通过', '待修改', '待修改'] };
+      articleTabList: ['全部', '已发布', '待审核', '待修改', '草稿', '未通过', '待修改', '待修改'],
+      cur_swiper: 0 };
 
   },
   methods: {
+    swiperChange: function swiperChange(e) {
+      // console.log(e)		
+      this.cur_swiper = e.detail.current;
+    },
+
+
+    // 来自子组件得值
+    change: function change(a) {
+      // console.log(a);
+      this.cur_swiper = a;
+    },
     // 导航条
     tabSelect: function tabSelect(e) {
       this.TabCur = e.currentTarget.dataset.id;

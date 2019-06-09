@@ -142,6 +142,16 @@ var _default2 =
       uni.navigateTo({
         url: '/pages/tabbar-5-detail/pageMyFollow/pageMyFollow' });
 
+    },
+    goToFBHLPage: function goToFBHLPage() {
+      uni.navigateTo({
+        url: '/pages/tabbar-5-detail/pageMyOverCardBHL/pageMyOverCardBHL' });
+
+    },
+    goToFansPage: function goToFansPage() {
+      uni.navigateTo({
+        url: '/pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans' });
+
     } } };exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

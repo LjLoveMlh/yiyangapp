@@ -11,8 +11,10 @@
 			<view class="content text-white text-df text-bold">
 				个人中心
 			</view>
-			<view class="action">
-				<text class="cuIcon-settingsfill text-white text-lg"></text>
+			<view class="action" @tap="goToPageMySetup">
+				<view class="imageHelp">
+					<image src="/static/img/navbar/setting.png"></image>
+				</view>
 			</view>
 		</view>
 
@@ -70,6 +72,14 @@
 					// console.log(error)
 				});
 			},
+			
+			
+			
+			goToPageMySetup(){
+				uni.navigateTo({
+					url:'/pages/tabbar-5-detail/pageMySetUp/pageMySetUp'
+				})
+			}
 
 		},
 		onLoad() {
@@ -125,6 +135,15 @@
 
 		.lj_margin-top-xl {
 			margin-top: 10%;
+		}
+	}
+	
+	.imageHelp{
+		width: 50upx;
+		height: 50upx;
+		image{
+			width: 100%;
+			height: 100%;
 		}
 	}
 </style>

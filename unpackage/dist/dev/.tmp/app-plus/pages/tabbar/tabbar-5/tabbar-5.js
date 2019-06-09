@@ -98,7 +98,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var selfUserCard = function selfUserCard() {return __webpack_require__.e(/*! import() | components/selfUserCard */ "components/selfUserCard").then(__webpack_require__.bind(null, /*! @/components/selfUserCard.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserCard.vue"));};var selfUserOverCard = function selfUserOverCard() {return __webpack_require__.e(/*! import() | components/selfUserOverCard */ "components/selfUserOverCard").then(__webpack_require__.bind(null, /*! @/components/selfUserOverCard.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserOverCard.vue"));};var selfUserFunList = function selfUserFunList() {return __webpack_require__.e(/*! import() | components/selfUserFunList */ "components/selfUserFunList").then(__webpack_require__.bind(null, /*! @/components/selfUserFunList.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserFunList.vue"));};var _default =
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var selfUserCard = function selfUserCard() {return __webpack_require__.e(/*! import() | components/selfUserCard */ "components/selfUserCard").then(__webpack_require__.bind(null, /*! @/components/selfUserCard.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserCard.vue"));};var selfUserOverCard = function selfUserOverCard() {return __webpack_require__.e(/*! import() | components/selfUserOverCard */ "components/selfUserOverCard").then(__webpack_require__.bind(null, /*! @/components/selfUserOverCard.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserOverCard.vue"));};var selfUserFunList = function selfUserFunList() {return __webpack_require__.e(/*! import() | components/selfUserFunList */ "components/selfUserFunList").then(__webpack_require__.bind(null, /*! @/components/selfUserFunList.vue */ "../../../../ProjectAbout/yiyangapp/components/selfUserFunList.vue"));};var _default =
+
+
 
 
 
@@ -169,6 +171,14 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
       }).catch(function (error) {
         // console.log(error)
       });
+    },
+
+
+
+    goToPageMySetup: function goToPageMySetup() {
+      uni.navigateTo({
+        url: '/pages/tabbar-5-detail/pageMySetUp/pageMySetUp' });
+
     } },
 
 
@@ -177,6 +187,7 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
     // 初始化数据请求
     _self.initRequestData(_self);
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

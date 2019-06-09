@@ -23,7 +23,10 @@
     "pages/tabbar-5-detail/pageMyService/pageMyService",
     "pages/tabbar-5-detail/pageMyAbout/pageMyAbout",
     "pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb",
-    "pages/tabbar-5-detail/pageMyFollow/pageMyFollow"
+    "pages/tabbar-5-detail/pageMyFollow/pageMyFollow",
+    "pages/tabbar-5-detail/pageMyOverCardBHL/pageMyOverCardBHL",
+    "pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans",
+    "pages/tabbar-5-detail/pageMySetUp/pageMySetUp"
   ],
   "subPackages": [],
   "window": {

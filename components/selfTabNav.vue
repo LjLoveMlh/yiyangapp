@@ -1,10 +1,10 @@
 <template>
 	<view>
-			<!-- 导航条 -->
+		<!-- 导航条 -->
 		<scroll-view scroll-x class="bg-white nav  solid-bottom shadow shadow-l">
 			<view class="   ljTab justify-around ">
-				<view class="ljpadding-tb-sm  text-center" :class="index==TabCur?'text-red cur':''" v-for="(item,index) in datalist"
-				 :key="index"  @tap="tabSelect" :data-id="index">
+				<view class="ljpadding-tb-sm  text-center" :class="index==NavTabCur?'text-red cur':''" v-for="(item,index) in datalist"
+				 :key="index" @tap="tabSelect" :data-id="index">
 					{{item}}
 				</view>
 			</view>
@@ -19,23 +19,30 @@
 				// 导航条
 				TabCur: 0,
 				scrollLeft: 0,
-		
+
 			};
 		},
 		props: {
 			datalist: {
 				type: Array,
 				default: () => []
+			},
+			NavTabCur: {
+				type: [String,Number],
+				default: 0
 			}
 		},
-		methods:{
-				// 导航条
+		computed:{
+			
+		},
+		methods: {
+			// 导航条
 			tabSelect(e) {
-			
 				this.TabCur = e.currentTarget.dataset.id;
-				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
+				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
+				this.$emit("change", this.TabCur)
 			},
-			
+
 		}
 	}
 </script>
@@ -54,5 +61,4 @@
 			padding-bottom: 15upx;
 		}
 	}
-
 </style>

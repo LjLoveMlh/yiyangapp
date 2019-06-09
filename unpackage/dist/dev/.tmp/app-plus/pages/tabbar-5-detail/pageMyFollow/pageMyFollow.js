@@ -98,7 +98,36 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -152,7 +181,11 @@ var _default =
       // 导航条
       TabCur: 0,
       scrollLeft: 0,
-      articleTabList: ['全部', '话题', '达人', '分类', '品牌', '商品', '关键词', '商城'] };
+      articleTabList: ['全部', '话题', '达人', '分类', '品牌', '商品', '关键词', '商城'],
+
+
+      isItemHidden: true,
+      maskList: ['开启推送', '订阅设置', '取消关注'] };
 
   },
   methods: {
@@ -161,12 +194,13 @@ var _default =
       this.TabCur = e.currentTarget.dataset.id;
       this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
     },
-    funMoreOptions: function funMoreOptions() {
-      uni.showToast({
-        title: '点击生效' });
-
+    funMoreOptions: function funMoreOptions(e) {
+      // uni.showToast({
+      // 	title: '点击生效'
+      // })
+      console.log(e, " at pages\\tabbar-5-detail\\pageMyFollow\\pageMyFollow.vue:101");
+      this.isItemHidden = false;
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
 /***/ }),
 

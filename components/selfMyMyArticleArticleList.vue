@@ -10,7 +10,7 @@
 					</view>
 					<view class="itemRight margin-left-sm ">
 						<view class="flex-sub text-black ">
-							<view class="rightText">在你心头看ffdf到覅书法在你心头看ffdf到覅书法家发生的雷锋精神多了附件是</view>
+							<view class="rightText">在你心头看ffdf到覅书法在书法在你心头看覅书法家发生的雷锋精神多了附件是</view>
 						</view>
 						<view class="flex-sub rightBottm ">
 							<view class="text-red ">未通过</view>

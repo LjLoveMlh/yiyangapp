@@ -2,7 +2,7 @@
 	<view>
 		<view class="LjCardHelp margin-top">
 			<view class="padding-tb-sm  ljAround bg-white text-center flex  ">
-				<view class="user flex-sub">
+				<view class="user flex-sub" @tap="goToFBHLPage">
 					<view class="text-bold">{{datalist.countLeft}}</view>
 					<view class="padding-top-xs text-sm ">{{datalist.textLeft}}</view>
 				</view>
@@ -10,7 +10,7 @@
 					<view class="text-bold">{{datalist.countCenter}}</view>
 					<view class="padding-top-xs text-sm ">{{datalist.textCenter}}</view>
 				</view>
-				<view class="user flex-sub">
+				<view class="user flex-sub" @tap="goToFansPage">
 					<view class="text-bold">{{datalist.countRight}}</view>
 					<view class="padding-top-xs text-sm ">{{datalist.textRight}}</view>
 				</view>
@@ -42,7 +42,18 @@
 				uni.navigateTo({
 					url:'/pages/tabbar-5-detail/pageMyFollow/pageMyFollow'
 				})
+			},
+			goToFBHLPage(){
+					uni.navigateTo({
+					url:'/pages/tabbar-5-detail/pageMyOverCardBHL/pageMyOverCardBHL'
+				})
+			},
+			goToFansPage(){
+					uni.navigateTo({
+					url:'/pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans'
+				})
 			}
+			
 		}
 	}
 </script>

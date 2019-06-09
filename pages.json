@@ -139,6 +139,18 @@
             "path" : "pages/tabbar-5-detail/pageMyFollow/pageMyFollow",
             "style" : {"navigationBarTitleText": "关注管理"}
         }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyOverCardBHL/pageMyOverCardBHL",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/tabbar-5-detail/pageMySetUp/pageMySetUp",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
