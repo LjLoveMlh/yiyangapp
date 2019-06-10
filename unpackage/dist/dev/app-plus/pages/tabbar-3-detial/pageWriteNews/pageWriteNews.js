@@ -1,1 +1,0 @@
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/tabbar-3-detial/pageWriteNews/pageWriteNews.wxml') } }));

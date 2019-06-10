@@ -3,35 +3,15 @@
 		<!-- 		<view class="wrap-top"> -->
 		<!-- 顶部分类入口 -->
 		<selfTopClassThum :datalist='topClassThumbList'></selfTopClassThum>
-
-
-
-
-
 		<!-- 系统通知，消息推送，（发帖入口组件） -->
 		<view class="padding-tb-xs bg-white ">
 			<selfPostingEntry :datalist='messageTypeList' />
-
 		</view>
-
-
-
 		<!-- 评论内容及原文 -->
 		<view class="margin-top-xs">
 			<messageUser :datalist="usrCommonList" />
 		</view>
-
-
-
-
-
-
 	</view>
-
-
-
-
-
 </template>
 
 <script>
@@ -57,19 +37,8 @@
 				messageTypeList: [],
 				// 用户评论数据
 				usrCommonList: [],
-
 				//顶部分类入口 
 				topClassThumbList: [],
-
-
-				userList: [{
-					user: "红尘货",
-					userComment: "评论了你的文章",
-					userCommentSays: "有一张3元券可以叠加，本来不想下单的，结果...",
-					originText: "原文：南国 开心椰球 榴莲味 100g",
-					dataTime: "1天前",
-					pic: "https://ossweb-img.qq.com/images/lol/img/champion/Morgana.png"
-				}]
 			}
 		},
 		methods: {

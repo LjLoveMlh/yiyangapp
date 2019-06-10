@@ -24,7 +24,6 @@
 							</view>
 						</view>
 					</view>
-
 					<!-- 评论内容及原文摘要 -->
 					<view class="ljCommentAll padding-lr text-df bg-white padding-bottom-sm">
 						<view class="ljUserCommentText text-df padding-bottom-xs text-cut ">
@@ -37,7 +36,6 @@
 								<view class="imgHelp">
 									<image mode="aspectFill" :src="item.coverImg">文章封面</image>
 								</view>
-
 							</view>
 
 							<view class="articleRight padding-lr-sm bg-gray">

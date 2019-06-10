@@ -1,1 +1,0 @@
-<view class="bg-white  data-v-4464e236" bind:__l="__l"><self-adertise class="margin-bottom-sm data-v-4464e236" datalist="{{swiperList}}"></self-adertise><self-posting-entry datalist="{{postingEntryList}}" class="data-v-4464e236"></self-posting-entry></view>

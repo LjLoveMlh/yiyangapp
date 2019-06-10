@@ -15,7 +15,7 @@
 
 		<view class="articleList ">
 			<block v-for="(item,index) in 10">
-				<view class="articleItem margin-top-sm  margin-lr-sm shadow padding-tb-sm padding-lr-sm  bg-white  flex">
+				<view class="articleItem margin-top-sm  margin-lr-sm shadow padding-tb-sm padding-lr-sm  bg-white  flex" @tap="goToPageUserDetail">
 					<view class="itemLeft ">
 						<view class="imgHelp ">
 							<image mode='aspectFill' src="https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg"></image>
@@ -33,41 +33,34 @@
 							<!-- 空格不删除 -->
 							<view class="itemRightBottom text-gray">60 文章 0 爆料 154 评论</view>
 						</view>
-
 					</view>
 					<view class="itemEnd">
-						<view class="cuIcon-moreandroid text-gray" @tap="funMoreOptions"></view>
+						<view class="cuIcon-moreandroid text-gray" :data-id="index" @tap.stop="funMoreOptions"></view>
 					</view>
 
 
 
 
+					<!-- 能用但是点击事件弄不好 -->
 					<!-- 弹出蒙层 -->
-					<!-- <view class="grayItem  animation-fade" :hidden="isItemHidden">
-						<view class="grayItemMain  ">
-							<block v-for="(item,index) in maskList">
-								<view class="grayReItem bg-white  ">{{item}}</view>
-							</block>
+					<block >
+						<view class="grayItem" :class="[index===itemCur?'animation-fade':'']" v-show='index===itemCur' @tap.stop="itemCur=-1">
+							<view class="grayItemMain  ">
+								<block v-for="(item,index) in maskList" :key='index'>
+									<view class="grayReItem bg-white  ">{{item}}</view>
+								</block>
+							</view>
 						</view>
-
-					</view> -->
-
+					</block>
 				</view>
 			</block>
 		</view>
 
 
-
-		<!-- 		<view class="cu-bar btn-group ">
-			<button class="cu-btn  shadow bg-red round ">
-				<view class="cuIcon-add"></view> 保存
-			</button>
-		</view> -->
-
 		<!-- 悬浮按钮 -->
 		<view class="circle-float">
-			<button class="cu-btn padding-tb-sm  shadow bg-red round ">
-				<view class="cuIcon-add text-xl text-bold margin-right-sm"></view>
+			<button class="cu-btn padding-tb-lg padding-lr  bg-red round  text-bold">
+				<view class=" btn_add_text margin-right-xs cuIcon-add"></view>
 				添加关注
 			</button>
 		</view>
@@ -85,6 +78,7 @@
 
 
 				isItemHidden: true,
+				itemCur: -1,
 				maskList: ['开启推送', '订阅设置', '取消关注']
 			};
 		},
@@ -98,8 +92,15 @@
 				// uni.showToast({
 				// 	title: '点击生效'
 				// })
-				console.log(e)
-				this.isItemHidden = false;
+				this.itemCur = +e.currentTarget.dataset.id;
+				console.log(this.itemCur)
+				// this.isItemHidden = false;
+			},
+
+			goToPageUserDetail() {
+				uni.navigateTo({
+					url: '/pages/tabbar-5-detail/pageMyFollow/pageUserDetail/pageUserDetail'
+				})
 			}
 		}
 	}
@@ -123,21 +124,19 @@
 		}
 	}
 
-
 	// 关注列表
 	.articleItem {
 		display: flex;
 		flex-direction: row;
 
-
 		.grayItem {
 			position: absolute;
 			left: 20upx;
 			right: 20upx;
-			height: 180upx;
-			margin-top: -30upx;
+			height: 160upx;
+			margin-top: -20upx;
 			background-color: #000;
-			opacity: 0.6;
+			opacity: .6;
 			border-radius: 4upx;
 			display: flex;
 			align-items: center;
@@ -163,7 +162,6 @@
 				}
 			}
 		}
-
 
 		.itemLeft {
 			flex: 2.34;
@@ -225,25 +223,16 @@
 
 	// 悬浮按钮
 	.circle-float {
-		// color: #ffffff;
-		// position: fixed;
-		// display: flex;
-		// align-items: center;
-		// justify-content: center;
-		// bottom: 30rpx;
-		// right: 30rpx;
-
-		// width: 90rpx;
-		// height: 90rpx;
-		// border-radius: 50%;
-		// font-size: 65rpx;
-		// background: #f43f3b;
-		// box-shadow: 0px 5px 10px #bbb;
 		position: fixed;
 		left: 50%;
-			bottom: 70rpx;
+		bottom: 70rpx;
 		transform: translate(-50%, -50%);
 		/* 50%为自身尺寸的一半 */
 		-webkit-transform: translate(-50%, -50%);
+
+		.btn_add_text {
+			font-size: 40upx;
+			font-weight: bold;
+		}
 	}
 </style>

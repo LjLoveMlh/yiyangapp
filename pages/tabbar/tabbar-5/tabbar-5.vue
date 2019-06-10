@@ -1,7 +1,8 @@
 <template>
 	<view class="bg-white">
 		<!-- 个人信息 顶部 -->
-		<view class="top_bg">
+		<view class="top_bg" style="background-image: url(https://ossweb-img.qq.com/images/lol/web201310/skin/big10006.jpg);">
+			
 		</view>
 		<!-- 状态栏填充 -->
 		<view class="nav_bar"></view>
@@ -96,7 +97,7 @@
 
 		// 头部整体
 		.top_bg {
-			background: red;
+			// background: red;
 			position: absolute;
 			border-radius: 0 0 10% 10%;
 			height: 350upx;

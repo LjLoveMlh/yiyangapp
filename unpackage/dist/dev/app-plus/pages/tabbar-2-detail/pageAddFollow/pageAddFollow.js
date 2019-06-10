@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"ljcard-menu.",[1],"data-v-286b212c { border-radius: ",[0,4],"; }\n",],undefined,{path:"./pages/tabbar-2-detail/pageAddFollow/pageAddFollow.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/tabbar-2-detail/pageAddFollow/pageAddFollow.wxml') } }));

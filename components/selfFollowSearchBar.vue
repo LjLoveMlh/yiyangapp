@@ -5,7 +5,7 @@
 				<view class="mainLeft text-df text-gray padding-sm">
 					搜索您想关注的内容
 				</view>
-				<view class="mainRight bg-gradual-red text-lg text-bold padding-sm text-white text-center">
+				<view class="mainRight bg-red text-lg text-bold padding-sm text-white text-center">
 					<view class="cuIcon-search "> </view>
 					<!-- <image style="z-index: 1;" src="/static/img/navbar/nav_home_search@3x.png" /> -->
 				</view>

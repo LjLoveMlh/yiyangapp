@@ -14,8 +14,6 @@
 				<view>下一步</view>
 			</view>
 		</view>
-
-
 		<!--标题输入  -->
 		<view class="bg-white solids-bottom ">
 			<view class="ljTextAreaFa padding-top margin-lr   solid-top  " @tap="focusipt">
@@ -27,7 +25,6 @@
 
 			</view>
 		</view>
-
 		<!-- 分类选择 -->
 		<view class="cu-form-group  ">
 			<view class="title">选择分类</view>

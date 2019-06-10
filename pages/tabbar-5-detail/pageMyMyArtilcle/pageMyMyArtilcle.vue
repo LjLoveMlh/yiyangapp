@@ -2,27 +2,27 @@
 	<view class="main_content bg-gray">
 		<!-- 导航条 -->
 		<selfTabNav :datalist='tabList' :NavTabCur='cur_swiper' @change="change" />
-		<swiper :current="cur_swiper" @change='swiperChange' class="ljmargin-top-xs" duration="300">
-			<swiper-item>
-				<!-- 文章类型Tab -->
-				<scroll-view scroll-x class="bg-white nav  padding-lr-sm" :scroll-left="scrollLeft" scroll-with-animation>
-					<view class=" ljCuItemFather text-sm">
-						<view class=" ljCuItem" :class="index==TabCur?'bg-red':'bg-gray'" v-for="(item,index) in articleTabList" :key="index"
-						 @tap="tabSelect" :data-id="index">
-							{{item}}
-						</view>
-					</view>
-				</scroll-view>
-				<!-- 文章item -->
-				<selfMyMyArticleArticleList />
-			</swiper-item>
-			<swiper-item>1</swiper-item>
+		<!-- <swiper :current="cur_swiper" @change='swiperChange' class="ljmargin-top-xs" duration="300"> -->
+		<!-- <swiper-item> -->
+		<!-- 文章类型Tab -->
+		<scroll-view scroll-x class="bg-white nav  padding-lr-sm" :scroll-left="scrollLeft" scroll-with-animation>
+			<view class=" ljCuItemFather text-sm">
+				<view class=" ljCuItem" :class="index==TabCur?'bg-red':'bg-gray'" v-for="(item,index) in articleTabList" :key="index"
+				 @tap="tabSelect" :data-id="index">
+					{{item}}
+				</view>
+			</view>
+		</scroll-view>
+		<!-- 文章item -->
+		<selfMyMyArticleArticleList />
+		<!-- </swiper-item> -->
+		<!-- 			<swiper-item>1</swiper-item>
 			<swiper-item>2</swiper-item>
-			<swiper-item>3</swiper-item>
-		</swiper>
+			<swiper-item>3</swiper-item> -->
+		<!-- </swiper> -->
 
 		<!-- 悬浮按钮 -->
-		<view class="circle-float">
+		<view class="circle-float " @tap="goToPageWriteArticle">
 			<view class="cuIcon-add"></view>
 		</view>
 	</view>
@@ -65,6 +65,13 @@
 				this.TabCur = e.currentTarget.dataset.id;
 				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
 			},
+
+			// 添加文章
+			goToPageWriteArticle() {
+				uni.navigateTo({
+					url: '/pages/tabbar-3-detial/pageWriteArticle/pageWriteArticle',
+				})
+			}
 		}
 	}
 </script>

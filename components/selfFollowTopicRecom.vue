@@ -10,7 +10,7 @@
 					<view class="itemName margin-tb-sm">{{item.nickName}}</view>
 					<view class="itemDesrc text-center text-gray margin-top-sm">{{item.desrc}}</view>
 					<view class="itemButton margin-top-sm">
-						<button class="cu-btn ljcu-btn  bg-gradual-red sm   ">
+						<button class="cu-btn ljcu-btn  bg-red sm   ">
 							<text class='cuIcon-add '> 关注</text>
 						</button>
 					</view>
@@ -31,8 +31,8 @@
 		name: "selfFollowTopicRecom",
 		props: {
 			datalist: {
-				type: Object,
-				default: () => {}
+				type: Array,
+				default: () => []
 			}
 		},
 	}

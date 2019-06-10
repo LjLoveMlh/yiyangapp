@@ -46,7 +46,7 @@
 						break;
 					case '我的点赞':
 						uni.navigateTo({
-							url: '/pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb'
+							url: '/pages/tabbar-5-detail/pageMyMyThumb/pageMyMyThumb'
 						})
 						break;
 					case '我的爆料':

@@ -100,55 +100,70 @@
 					"titleNView": false
 				}
 			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle",
+			"style": {
+				"navigationBarTitleText": "我的文章"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment",
+			"style": {
+				"navigationBarTitleText": "我的评论"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyBHL/pageMyBHL",
+			"style": {
+
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyInvite/pageMyInvite",
+			"style": {}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney",
+			"style": {}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyService/pageMyService",
+			"style": {}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyAbout/pageMyAbout",
+			"style": {
+				"navigationBarTitleText": "关于我们"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyMyThumb/pageMyMyThumb",
+			"style": {
+				"navigationBarTitleText": "我的点赞"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyFollow/pageMyFollow",
+			"style": {
+				"navigationBarTitleText": "关注管理"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyOverCardBHL/pageMyOverCardBHL",
+			"style": {
+				"navigationBarTitleText": "爆料管理"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans",
+			"style": {
+				"navigationBarTitleText": "粉丝管理"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMySetUp/pageMySetUp",
+			"style": {
+					"navigationBarTitleText": "设置"
+			}
+		}, {
+			"path": "pages/tabbar-5-detail/pageMyFollow/pageUserDetail/pageUserDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	    ,{
-            "path" : "pages/tabbar-5-detail/pageMyMyArtilcle/pageMyMyArtilcle",
-            "style" : {
-					"navigationBarTitleText": "我的文章"
-			}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyMyComment/pageMyMyComment",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyBHL/pageMyBHL",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyInvite/pageMyInvite",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyEarnMoney/pageMyEarnMoney",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyService/pageMyService",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyAbout/pageMyAbout",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/selfMyMyThumb/selfMyMyThumb",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyFollow/pageMyFollow",
-            "style" : {"navigationBarTitleText": "关注管理"}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyOverCardBHL/pageMyOverCardBHL",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans",
-            "style" : {}
-        }
-        ,{
-            "path" : "pages/tabbar-5-detail/pageMySetUp/pageMySetUp",
+            "path" : "pages/tabbar/tabbar-1/pageClassInEntry/pageClassInEntry",
             "style" : {}
         }
     ],

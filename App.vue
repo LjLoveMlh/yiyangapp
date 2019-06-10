@@ -27,18 +27,15 @@ export default {
 <style>
 	@import "colorui/main.css";
 	@import "colorui/icon.css";
+	@import "colorui/animation.css";
 page{
 	background-color: #fff;
 }
 
 .PH_articleTitle{
-
 		font-size: 40upx;
 		font-weight: bold;
 		color: #ccc;
-		
-		
-	
 }
 
 /*每个页面公共css */ 

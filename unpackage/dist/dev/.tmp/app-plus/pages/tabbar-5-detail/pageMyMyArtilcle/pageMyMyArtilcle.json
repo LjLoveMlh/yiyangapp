@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "我的文章",
-  "usingComponents": {
-    "self-tab-nav": "/components/selfTabNav",
-    "self-my-my-article-article-list": "/components/selfMyMyArticleArticleList"
-  }
-}

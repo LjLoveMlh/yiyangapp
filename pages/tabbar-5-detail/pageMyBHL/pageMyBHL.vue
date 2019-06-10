@@ -1,6 +1,6 @@
 <template>
 	<view>
-		我的爆料
+我的爆料
 	</view>
 </template>
 
@@ -10,10 +10,12 @@
 			return {
 				
 			};
+		},
+		methods:{
 		}
 	}
 </script>
 
-<style lang="scss">
-
+<style lang="scss" scoped="">
+	
 </style>

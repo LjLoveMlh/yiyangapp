@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\nbody { height: 100%; }\n.",[1],"login_page { position: relative; top: 0; left: 0; height: 100%; width: 100%; background: #fff; padding-bottom: 60px; -webkit-box-sizing: border-box; box-sizing: border-box; }\n",],undefined,{path:"./pages/commonPage/pageUserLogin/pageUserLogin.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/commonPage/pageUserLogin/pageUserLogin.wxml') } }));

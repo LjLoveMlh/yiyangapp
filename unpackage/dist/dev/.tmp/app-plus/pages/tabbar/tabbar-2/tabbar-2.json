@@ -1,9 +1,0 @@
-{
-  "enablePullDownRefresh": true,
-  "navigationBarTitleText": "关注",
-  "usingComponents": {
-    "user-article-item": "/components/userArticleItem",
-    "self-top-swiper-class-in": "/components/selfTopSwiperClassIn",
-    "uni-load-more": "/components/uni-load-more"
-  }
-}

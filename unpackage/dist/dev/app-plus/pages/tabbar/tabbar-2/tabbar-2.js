@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n.",[1],"pic-zi { position: absolute; right: ",[0,-2],"; bottom: ",[0,-5],"; font-size: ",[0,38],"; color: orange; z-index: 999; }\n.",[1],"bot-pa { padding-bottom: ",[0,30],"; }\n.",[1],"lj_margin_auto { margin: auto; }\n",],undefined,{path:"./pages/tabbar/tabbar-2/tabbar-2.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/tabbar/tabbar-2/tabbar-2.wxml') } }));

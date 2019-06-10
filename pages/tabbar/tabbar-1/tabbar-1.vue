@@ -227,19 +227,11 @@
 				});
 			}
 		},
-
-
-
-
 		onLoad(e) {
 			var _self = this
 			// 初始化数据请求
 			_self.initRequestData(_self)
-
-
-
 		},
-
 		//下拉刷新，加载数据
 		onPullDownRefresh() {
 			var _self = this;
@@ -250,8 +242,6 @@
 			setTimeout(() => {
 				uni.stopPullDownRefresh();
 			}, 500)
-
-
 		},
 		onReachBottom() {
 			var _self = this;

@@ -1,2 +1,0 @@
-setCssToHead(["@charset \x22UTF-8\x22;\n",],undefined,{path:"./pages/tabbar/tabbar-3/tabbar-3.wxss"})();
-document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/tabbar/tabbar-3/tabbar-3.wxml') } }));

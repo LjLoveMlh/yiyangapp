@@ -1,8 +1,8 @@
 <template>
 	<view>
-		<view class="cu-list menu-avatar  bg-white" >
+		<view class="cu-list menu-avatar  bg-white">
 			<block v-for="(item,index) in datalist">
-				<view class="cu-item margin-0" >
+				<view class="cu-item margin-0">
 					<view class="cu-avatar round lg" :style="{'background-image':'url('+item.avatar+')'}">
 						<view class="pic-zi ">
 							<image class="lj_tag_vip" src="/static/img/vip/vip_red.png">
@@ -23,7 +23,7 @@
 						</view>
 					</view>
 					<!-- 右侧关注 -->
-					<button class="cu-btn ljcu-btn bg-gradual-red sm  margin-right-sm ">
+					<button class="cu-btn ljcu-btn bg-red sm  margin-right-sm ">
 						<text class='cuIcon-add '> 关注</text>
 					</button>
 				</view>
@@ -39,14 +39,14 @@
 
 				// 定义 type 
 				// 0=达人 1=话题 2=分类 3=品牌
-				userRecomList
+				// userRecomList
 
 			};
 		},
 		name: "selfFollowUserRecom",
 		props: {
 			datalist: {
-				type: Array,
+				type: [Object, Array],
 				default: () => []
 			}
 		},
@@ -69,9 +69,11 @@
 
 
 	}
-.lj_margin_left10{
-	margin-left: 10upx;
-}
+
+	.lj_margin_left10 {
+		margin-left: 10upx;
+	}
+
 	.pic-zi {
 		position: absolute;
 		right: -2upx;
@@ -97,11 +99,11 @@
 		text-overflow: ellipsis;
 		overflow: hidden;
 		word-break: break-all;
-	
+
 		// white-space: nowrap;
 	}
-	.ljcu-btn{
+
+	.ljcu-btn {
 		border-radius: 4upx;
 	}
-
 </style>

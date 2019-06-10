@@ -1,1 +1,0 @@
-<view bind:__l="__l"><view class="bg-gray margin-top-xs"><view class="grid  flex-sub  bg-gray  col-2"><block wx:for="{{datalist}}" wx:for-item="item" wx:for-index="index" wx:key="index"><view class=" lj_imgItem_width"><view class="bg-img " style="{{'height:207rpx;'+('background-image:'+('url('+item.url+')')+';')}}"></view></view></block></view></view></view>
