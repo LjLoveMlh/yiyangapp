@@ -152,7 +152,7 @@
 		}, {
 			"path": "pages/tabbar-5-detail/pageMySetUp/pageMySetUp",
 			"style": {
-					"navigationBarTitleText": "设置"
+				"navigationBarTitleText": "设置"
 			}
 		}, {
 			"path": "pages/tabbar-5-detail/pageMyFollow/pageUserDetail/pageUserDetail",
@@ -161,12 +161,18 @@
 					"titleNView": false
 				}
 			}
+		}, {
+			"path": "pages/tabbar/tabbar-1/pageClassInEntry/pageClassInEntry",
+			"style": {}
+		}, {
+			"path": "pages/tabbar/tabbar-1/pageUserArticleDetail/pageUserArticleDetail",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
-	    ,{
-            "path" : "pages/tabbar/tabbar-1/pageClassInEntry/pageClassInEntry",
-            "style" : {}
-        }
-    ],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarBackgroundColor": "#F8F8F8",

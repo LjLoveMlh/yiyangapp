@@ -1,7 +1,7 @@
 <template>
 	<view>
 		<!-- 用户基础信息部分 -->
-		<view class="bg-gray margin-bottom-xs ">
+		<view class="bg-gray margin-bottom-xs " @tap="goToPageUserArticleDetail">
 			<view class="cu-list menu-avatar  ">
 				<view class="cu-item">
 					<view class="cu-avatar round lg" :style="{'background-image':'url('+datalist.avatar+')'}">
@@ -84,6 +84,11 @@
 					current: current,
 					urls: list
 				});
+			},
+			goToPageUserArticleDetail(){
+				uni.navigateTo({
+					url:'/pages/tabbar/tabbar-1/pageUserArticleDetail/pageUserArticleDetail'
+				})
 			}
 		}
 

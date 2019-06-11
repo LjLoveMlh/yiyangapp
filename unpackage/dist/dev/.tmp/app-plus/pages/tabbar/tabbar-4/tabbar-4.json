@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "消息",
+  "usingComponents": {
+    "message-user": "/components/messageUser",
+    "self-posting-entry": "/components/selfPostingEntry",
+    "self-top-class-thum": "/components/selfTopClassThum"
+  }
+}

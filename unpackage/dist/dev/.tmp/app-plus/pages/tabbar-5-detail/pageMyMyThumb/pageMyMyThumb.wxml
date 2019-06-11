@@ -1,0 +1,1 @@
+<view><block wx:for="{{userArticleList}}" wx:for-item="userItem" wx:for-index="userIndex" wx:key="userIndex"><block><user-article-item vue-id="{{'1-'+userIndex}}" datalist="{{userItem}}" bind:__l="__l"></user-article-item></block></block></view>

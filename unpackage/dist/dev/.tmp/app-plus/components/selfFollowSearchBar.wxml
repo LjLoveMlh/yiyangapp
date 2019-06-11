@@ -1,0 +1,1 @@
+<view><view class="ljSearchBar bg-white"><view class="searchBarMain  flex justify-between"><view class="mainLeft text-df text-gray padding-sm">搜索您想关注的内容</view><view class="mainRight bg-red text-lg text-bold padding-sm text-white text-center"><view class="cuIcon-search "></view></view></view></view></view>

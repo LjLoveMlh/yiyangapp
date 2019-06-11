@@ -1,0 +1,1 @@
+<view class="data-v-128a000d"><self-common-l-r-header vue-id="1" datalist="{{headerList}}" class="data-v-128a000d" bind:__l="__l"></self-common-l-r-header><self-common-login-by-a-p vue-id="2" class="data-v-128a000d" bind:__l="__l"></self-common-login-by-a-p></view>

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+page.data-v-d6c664ee {
+  background-color: #fff;
+}
+page .lj_margin-tb-lg.data-v-d6c664ee {
+    margin-top: -15rpx;
+    margin-bottom: -15rpx;
+}
+.report_list_item.data-v-d6c664ee {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 35rpx;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.report_list_item .item_left.data-v-d6c664ee {
+    margin: 16rpx 0;
+}
+.report_list_item .item_left .item_left_img.data-v-d6c664ee {
+      width: 96rpx;
+      height: 96rpx;
+}
+.report_list_item .item_left .item_left_img image.data-v-d6c664ee {
+        width: 100%;
+        height: 100%;
+        -webkit-border-radius: 50%;
+                border-radius: 50%;
+}
+.report_list_item .item_right.data-v-d6c664ee {
+    width: -webkit-calc(96% - 96rpx);
+    width: calc(96% - 96rpx);
+    margin-left: 18rpx;
+    border-bottom: 1px solid #f5f5f5;
+}
+.report_list_item .item_right .ljContentAll.data-v-d6c664ee {
+      height: 100%;
+}
+.report_list_item .item_right .ljContentAll .ljContent.data-v-d6c664ee {
+        width: 90%;
+        margin: auto;
+        padding-right: 10rpx;
+        margin-left: 0px;
+}
+.report_list_item .item_right .ljContentAll .ljContent .mess-t.data-v-d6c664ee {
+          font-weight: bold;
+          white-space: nowrap;
+          overflow: hidden;
+}
+.report_list_item .item_right .ljContentAll .ljContent .mess-b.data-v-d6c664ee {
+          white-space: nowrap;
+          overflow: hidden;
+          margin-top: 4rpx;
+}
+.report_list_item .item_right .ljContentAll .ljAction.data-v-d6c664ee {
+        height: 100%;
+        margin-right: 0px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+}
+.report_list_item .item_right .ljContentAll .ljAction .ljActionHelp.data-v-d6c664ee {
+          -webkit-align-self: center;
+              -ms-flex-item-align: center;
+                  align-self: center;
+}
+.report_list:last-child .item_right.data-v-d6c664ee {
+  border-bottom: none;
+}
+

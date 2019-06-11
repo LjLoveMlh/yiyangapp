@@ -159,7 +159,7 @@
 	}
 </script>
 <style lang="scss" scoped="">
-	// 导航-=
+	// 状态栏-=
 	.nav_bar {
 		position: sticky;
 		top: 0;
@@ -220,10 +220,9 @@
 					color: orange;
 
 					.lj_tag_vip {
-
 						width: 40upx;
 						height: 40upx;
-						z-index: 1;
+				
 						border: 2upx solid white;
 						border-radius: 50%;
 					}

@@ -1,0 +1,1 @@
+<view class="bg-gray"><view class="margin-top-xs"><message-user vue-id="1" datalist="{{usrCommonList}}" bind:__l="__l"></message-user></view></view>

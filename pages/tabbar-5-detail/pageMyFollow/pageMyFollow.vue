@@ -43,7 +43,7 @@
 
 					<!-- 能用但是点击事件弄不好 -->
 					<!-- 弹出蒙层 -->
-					<block >
+					<!-- <block >
 						<view class="grayItem" :class="[index===itemCur?'animation-fade':'']" v-show='index===itemCur' @tap.stop="itemCur=-1">
 							<view class="grayItemMain  ">
 								<block v-for="(item,index) in maskList" :key='index'>
@@ -51,7 +51,7 @@
 								</block>
 							</view>
 						</view>
-					</block>
+					</block> -->
 				</view>
 			</block>
 		</view>

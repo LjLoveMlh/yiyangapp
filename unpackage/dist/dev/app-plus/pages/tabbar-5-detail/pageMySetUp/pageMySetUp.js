@@ -1,0 +1,2 @@
+setCssToHead(["@charset \x22UTF-8\x22;\nwx-page.",[1],"data-v-60dc3207 { background-color: #b3b3b3; }\n",],undefined,{path:"./pages/tabbar-5-detail/pageMySetUp/pageMySetUp.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/tabbar-5-detail/pageMySetUp/pageMySetUp.wxml') } }));

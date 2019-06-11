@@ -1,0 +1,1 @@
+<view class="bg-white  data-v-4464e236"><self-adertise class="margin-bottom-sm data-v-4464e236" vue-id="1" datalist="{{swiperList}}" bind:__l="__l"></self-adertise><self-posting-entry vue-id="2" datalist="{{postingEntryList}}" class="data-v-4464e236" bind:__l="__l"></self-posting-entry></view>
