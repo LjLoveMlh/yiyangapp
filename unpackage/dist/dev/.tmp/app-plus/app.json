@@ -28,7 +28,8 @@
     "pages/tabbar-5-detail/pageMyOverFans/pageMyOverFans",
     "pages/tabbar-5-detail/pageMySetUp/pageMySetUp",
     "pages/tabbar-5-detail/pageMyFollow/pageUserDetail/pageUserDetail",
-    "pages/tabbar/tabbar-1/pageClassInEntry/pageClassInEntry"
+    "pages/tabbar/tabbar-1/pageClassInEntry/pageClassInEntry",
+    "pages/tabbar/tabbar-1/pageUserArticleDetail/pageUserArticleDetail"
   ],
   "subPackages": [],
   "window": {

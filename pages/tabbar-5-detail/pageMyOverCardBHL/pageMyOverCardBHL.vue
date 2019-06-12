@@ -15,10 +15,8 @@
 
 
 		<!-- 爆料List -->
-
-
 		<view class="articleList margin-bottom-xl">
-			<block v-for="(item,index) in 10">
+			<block v-for="(item,index) in 10" :key='index'>
 				<view class="articleItem margin-top-sm  margin-lr-sm shadow padding-tb-sm padding-left-xs padding-right-sm bg-white  flex">
 					<view class="itemLeft ">
 						<view class="imgHelp ">
@@ -34,8 +32,8 @@
 							<view class="flex text-xs justify-between">
 								<view class="">京东 | 18-05-27</view>
 								<view class="flex">
-									<view class="cuIcon-message margin-right-lg">12</view>
-									<view class="cuIcon-redpacket">100%</view>
+									<view class="cuIcon-message margin-right-lg"><text class="margin-left-xs">12</text></view>
+									<view class="cuIcon-redpacket"><text class="margin-left-xs">100%</text></view>
 								</view>
 							</view>
 						</view>

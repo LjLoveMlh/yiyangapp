@@ -184,6 +184,11 @@ var _default2 =
         current: current,
         urls: list });
 
+    },
+    goToPageUserArticleDetail: function goToPageUserArticleDetail() {
+      uni.navigateTo({
+        url: '/pages/tabbar/tabbar-1/pageUserArticleDetail/pageUserArticleDetail' });
+
     } } };exports.default = _default2;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 
