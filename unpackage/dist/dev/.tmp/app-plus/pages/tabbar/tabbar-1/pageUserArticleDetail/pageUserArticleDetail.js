@@ -402,9 +402,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 var _default =
 {
   data: function data() {
@@ -416,6 +413,14 @@ var _default =
     goBack: function goBack() {
       uni.navigateBack({});
 
+
+    },
+    // viewimg(list, current) {
+    viewimg: function viewimg(e) {
+      console.log(e, " at pages\\tabbar\\tabbar-1\\pageUserArticleDetail\\pageUserArticleDetail.vue:320");
+      uni.previewImage({
+        current: 'http://i8.hexunimg.cn/2013-02-03/150889748.jpg',
+        urls: ['http://i8.hexunimg.cn/2013-02-03/150889748.jpg', 'http://i8.hexunimg.cn/2013-02-03/150889748.jpg'] });
 
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))

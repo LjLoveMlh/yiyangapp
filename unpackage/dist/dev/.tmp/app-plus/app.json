@@ -81,7 +81,7 @@
     "autoclose": false
   },
   "appname": "yiyang",
-  "compilerVersion": "2.0.0",
+  "compilerVersion": "2.0.1",
   "usingComponents": {
     "cu-custom": "/colorui/components/cu-custom"
   }

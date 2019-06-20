@@ -167,8 +167,15 @@
 		}, {
 			"path": "pages/tabbar/tabbar-1/pageUserArticleDetail/pageUserArticleDetail",
 			"style": {
+				"navigationBarTitleText": "国内精选详情",
 				"app-plus": {
-					"titleNView": false
+					"titleNView": {
+						"type": "transparent",
+						"buttons": [{
+								"type": "menu"
+							}
+						]
+					}
 				}
 			}
 		}

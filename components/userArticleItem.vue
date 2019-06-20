@@ -44,7 +44,7 @@
 					<view class="grid flex-sub padding-top-xs  margin-lr-xs  grid-square bg-white flex justify-between solids-bottom "
 					 :class="{'col-1 ljCol1Heght':datalist.imgList.length==1,'col-2':datalist.imgList.length==2,'col-3':datalist.imgList.length>2}">
 						<view class="bg-img " v-for="(imgItem,index) in datalist.imgList" :key="index" @tap="viewimg(datalist.imgList,imgItem)">
-							<image mode='aspectFill' :src="imgItem" @tap="viewimg(datalist.imgList,imgItem)"></image>
+							<image mode='aspectFill' :src="imgItem" @tap.stop="viewimg(datalist.imgList,imgItem)"></image>
 						</view>
 					</view>
 				</view>

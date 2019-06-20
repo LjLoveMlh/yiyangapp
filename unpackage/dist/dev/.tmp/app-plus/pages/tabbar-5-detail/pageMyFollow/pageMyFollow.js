@@ -166,7 +166,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 var _default =
 {
   data: function data() {
@@ -177,7 +176,7 @@ var _default =
       articleTabList: ['全部', '话题', '达人', '分类', '品牌', '商品', '关键词', '商城'],
 
 
-      isItemHidden: true,
+
       itemCur: -1,
       maskList: ['开启推送', '订阅设置', '取消关注'] };
 
@@ -188,15 +187,19 @@ var _default =
       this.TabCur = e.currentTarget.dataset.id;
       this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
     },
-    funMoreOptions: function funMoreOptions(e) {
-      // uni.showToast({
-      // 	title: '点击生效'
-      // })
-      this.itemCur = +e.currentTarget.dataset.id;
-      console.log(this.itemCur, " at pages\\tabbar-5-detail\\pageMyFollow\\pageMyFollow.vue:96");
-      // this.isItemHidden = false;
-    },
 
+    // 打开蒙层
+    funMoreOptions: function funMoreOptions(e) {
+      this.itemCur = +e.currentTarget.dataset.id;
+      console.log(this.itemCur, " at pages\\tabbar-5-detail\\pageMyFollow\\pageMyFollow.vue:94");
+    },
+    // 关闭蒙层
+    closeMaskItem: function closeMaskItem(index) {
+      console.log(index, " at pages\\tabbar-5-detail\\pageMyFollow\\pageMyFollow.vue:98");
+      this.itemCur = -1;
+      console.log(this.itemCur, " at pages\\tabbar-5-detail\\pageMyFollow\\pageMyFollow.vue:100");
+
+    },
     goToPageUserDetail: function goToPageUserDetail() {
       uni.navigateTo({
         url: '/pages/tabbar-5-detail/pageMyFollow/pageUserDetail/pageUserDetail' });

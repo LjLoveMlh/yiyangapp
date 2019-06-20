@@ -1,17 +1,17 @@
 <template>
 	<view class="bg-gray">
 		<!-- 状态栏 -->
-		<view class="nav_bar"></view>
+		<!-- <view class="nav_bar"></view> -->
 		<!-- 渐变导航栏 -->
 		<!-- 导航栏 -->
-		<view class="reNav_bar padding-lr-sm flex justify-between bg-white   solid-bottom ">
+		<!-- 		<view class="reNav_bar padding-lr-sm flex justify-between bg-white   solid-bottom ">
 			<view class="barLeft flex  padding-tb-sm  align-center">
 				<text class=" margin-left-xs text-bold text-black cuIcon-back_android " @tap="goBack"> </text>
 			</view>
 			<view class="barRight flex  justify-between padding-tb-sm   align-center text-black">
 				<view class="margin-right-sm text-black cuIcon-moreandroid"></view>
 			</view>
-		</view>
+		</view> -->
 		<!-- 文章图片部分  此处有透明 有被覆盖 不是很理解-->
 		<!-- 临时填充 -->
 		<view class="imgHelp">
@@ -61,7 +61,7 @@
 					</view>
 				</view>
 				<!-- 截图 -->
-				<view class="orderCutPicMain solid margin-left">
+				<view class="orderCutPicMain solid margin-left" @tap="viewimg">
 					<view class="orderCutPic ">
 						<image mode="aspectFit" src="http://i8.hexunimg.cn/2013-02-03/150889748.jpg"></image>
 					</view>
@@ -299,9 +299,6 @@
 				<view class="ljTagBtn bg-red">直达链接</view>
 			</view>
 		</view>
-
-
-
 	</view>
 </template>
 
@@ -317,7 +314,15 @@
 				uni.navigateBack({
 
 				})
-			}
+			},
+			// viewimg(list, current) {
+			viewimg(e) {
+				console.log(e);
+				uni.previewImage({
+					current: 'http://i8.hexunimg.cn/2013-02-03/150889748.jpg',
+					urls: [ 'http://i8.hexunimg.cn/2013-02-03/150889748.jpg', 'http://i8.hexunimg.cn/2013-02-03/150889748.jpg']
+				});
+			},
 		}
 	}
 </script>
@@ -326,32 +331,32 @@
 	page {
 		height: 100%;
 		margin-bottom: 180upx;
-		background-color:#eee; 
+		background-color: #eee;
 	}
 
 	// 状态栏-=
-	.nav_bar {
-		position: sticky;
-		top: 0;
-		height: var(--status-bar-height);
-		background: #fff;
-		z-index: 9999;
-	}
+	// .nav_bar {
+	// 	position: sticky;
+	// 	top: 0;
+	// 	height: var(--status-bar-height);
+	// 	background: #fff;
+	// 	z-index: 9999;
+	// }
 
-	.reNav_bar {
-		position: sticky;
-		top: var(--status-bar-height);
-		z-index: 1;
-		height: 88upx;
-
-		.barLeft {
-			font-size: 45upx;
-		}
-
-		.barRight {
-			font-size: 40upx;
-		}
-	}
+	// 	.reNav_bar {
+	// 		position: sticky;
+	// 		top: var(--status-bar-height);
+	// 		z-index: 1;
+	// 		height: 88upx;
+	// 
+	// 		.barLeft {
+	// 			font-size: 45upx;
+	// 		}
+	// 
+	// 		.barRight {
+	// 			font-size: 40upx;
+	// 		}
+	// 	}
 
 	// 文章顶部图片，此处临时填充
 	.imgHelp {
@@ -630,20 +635,24 @@
 		right: 0upx;
 		z-index: 1;
 		box-shadow: 0upx -4upx 4upx #eee;
-		.ljColom{
+
+		.ljColom {
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
+
 			// border: 2px solid red;
 			.ljBottomMarginP {
-			   
+
 				margin-top: 8upx;
 			}
-			
+
 		}
+
 		.lj_text-lg {
 			font-size: 40upx;
 		}
+
 		.ljTagBtn {
 			padding-top: 12upx;
 			padding-bottom: 12upx;

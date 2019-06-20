@@ -110,17 +110,11 @@
 				this.cardCur = e.detail.current
 			},
 			// towerSwiper
-
-
-
 			// 选项卡
 			tabSelect(index) {
 				this.TabCur = index;
 				this.scrollLeft = (index - 1) * 60
 			},
-
-
-
 			// 获取轮播图
 			getAdv(_self) {
 				this.uniFly.get({
@@ -133,7 +127,6 @@
 					// console.log(error)
 				});
 			},
-
 			// 请求分类入口class_in
 			getClassIn(_self) {
 				this.uniFly.get({
@@ -146,8 +139,6 @@
 					// console.log(error)
 				});
 			},
-
-
 			// 请求分类导航class_nav
 			getClassNav(_self) {
 				this.uniFly.get({
@@ -160,7 +151,6 @@
 					// console.log(error)
 				});
 			},
-
 			// 请求四张图广告fourAdverList
 			getFourAdverList(_self) {
 				this.uniFly.get({
@@ -173,7 +163,6 @@
 					// console.log(error)
 				});
 			},
-
 			// 请求某nav下用户文章
 			getUserArticleList(_self) {
 				this.uniFly.get({
@@ -186,20 +175,14 @@
 					// console.log(error)
 				});
 			},
-
-
-
-
 			// 初始化数据请求	
 			initRequestData(_self) {
-
 				var _self = _self
 				_self.getAdv(_self);
 				_self.getClassIn(_self);
 				_self.getClassNav(_self);
 				_self.getUserArticleList(_self);
 				_self.getFourAdverList(_self);
-
 			},
 			// 上拉加载
 			getmorenews(_self) {
@@ -257,9 +240,6 @@
 			// 正常应为:
 			// _self.getmorenews();
 		}
-
-
-
 	}
 </script>
 
@@ -267,24 +247,20 @@
 	.box {
 		margin: 20upx 0;
 	}
-
 	.box view.cu-bar {
 		margin-top: 20upx;
 	}
-
 	// 宫格
 	.lj_cu-item {
 		padding-top: 10upx;
 		padding-bottom: 10upx;
 		box-sizing: border-box;
 	}
-
 	.cu-bar .search-form {
 		line-height: normal !important;
 		display: flex;
 		align-items: center;
 	}
-
 	.nav_bar {
 		position: sticky;
 		top: 0;
@@ -292,7 +268,6 @@
 		background: #fff;
 		z-index: 9999;
 	}
-
 	.class_in {
 		position: sticky;
 		top: var(--status-bar-height);

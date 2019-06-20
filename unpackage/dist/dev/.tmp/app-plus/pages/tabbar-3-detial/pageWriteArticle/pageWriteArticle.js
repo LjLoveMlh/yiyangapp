@@ -147,27 +147,26 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
 {
   components: {
     lyMarkdown: lyMarkdown },
 
   data: function data() {
     return {
+
+      // 原来的富文本编辑器
       textareaData: "",
       textareaHtml: "",
       showPreview: false,
       name: '七月_',
-
-
       textareaAValue: null,
       isfocus: false,
-
       classIndex: -1,
-      pickerClass: ['', '经验', '晒单'] };
+      pickerClass: ['', '经验', '晒单'],
+
+
+      // 官方原版富文本编辑器
+      placeholder: '开始输入...' };
 
 
   },
@@ -189,12 +188,20 @@ __webpack_require__.r(__webpack_exports__);
     textareaAInput: function textareaAInput(e) {
       this.textareaAValue = e.detail.value;
     },
-
-
-
     // 选择分类
     PickerChangeClass: function PickerChangeClass(e) {
       this.classIndex = e.detail.value;
+    },
+
+
+    //官方原来的富文本编辑器
+    onEditorReady: function onEditorReady() {var _this = this;
+      uni.createSelectorQuery().select('#editor').context(function (res) {
+        _this.editorCtx = res.context;
+      }).exec();
+    },
+    undo: function undo() {
+      this.editorCtx.undo();
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-app-plus/dist/index.js */ "./node_modules/@dcloudio/uni-app-plus/dist/index.js")["default"]))
 

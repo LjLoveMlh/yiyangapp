@@ -29,27 +29,6 @@ page.data-v-136bd838 {
   margin-bottom: 180rpx;
   background-color: #eee;
 }
-.nav_bar.data-v-136bd838 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  height: var(--status-bar-height);
-  background: #fff;
-  z-index: 9999;
-}
-.reNav_bar.data-v-136bd838 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: var(--status-bar-height);
-  z-index: 1;
-  height: 88rpx;
-}
-.reNav_bar .barLeft.data-v-136bd838 {
-    font-size: 45rpx;
-}
-.reNav_bar .barRight.data-v-136bd838 {
-    font-size: 40rpx;
-}
 .imgHelp.data-v-136bd838 {
   width: 100%;
   height: 300rpx;

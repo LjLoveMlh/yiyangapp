@@ -1,4 +1,12 @@
 {
-  "titleNView": false,
+  "navigationBarTitleText": "国内精选详情",
+  "titleNView": {
+    "type": "transparent",
+    "buttons": [
+      {
+        "type": "menu"
+      }
+    ]
+  },
   "usingComponents": {}
 }

@@ -210,17 +210,11 @@ timer = null;var _default =
       this.cardCur = e.detail.current;
     },
     // towerSwiper
-
-
-
     // 选项卡
     tabSelect: function tabSelect(index) {
       this.TabCur = index;
       this.scrollLeft = (index - 1) * 60;
     },
-
-
-
     // 获取轮播图
     getAdv: function getAdv(_self) {
       this.uniFly.get({
@@ -233,7 +227,6 @@ timer = null;var _default =
         // console.log(error)
       });
     },
-
     // 请求分类入口class_in
     getClassIn: function getClassIn(_self) {
       this.uniFly.get({
@@ -246,8 +239,6 @@ timer = null;var _default =
         // console.log(error)
       });
     },
-
-
     // 请求分类导航class_nav
     getClassNav: function getClassNav(_self) {
       this.uniFly.get({
@@ -260,7 +251,6 @@ timer = null;var _default =
         // console.log(error)
       });
     },
-
     // 请求四张图广告fourAdverList
     getFourAdverList: function getFourAdverList(_self) {
       this.uniFly.get({
@@ -273,7 +263,6 @@ timer = null;var _default =
         // console.log(error)
       });
     },
-
     // 请求某nav下用户文章
     getUserArticleList: function getUserArticleList(_self) {
       this.uniFly.get({
@@ -286,20 +275,14 @@ timer = null;var _default =
         // console.log(error)
       });
     },
-
-
-
-
     // 初始化数据请求	
     initRequestData: function initRequestData(_self) {
-
       var _self = _self;
       _self.getAdv(_self);
       _self.getClassIn(_self);
       _self.getClassNav(_self);
       _self.getUserArticleList(_self);
       _self.getFourAdverList(_self);
-
     },
     // 上拉加载
     getmorenews: function getmorenews(_self) {

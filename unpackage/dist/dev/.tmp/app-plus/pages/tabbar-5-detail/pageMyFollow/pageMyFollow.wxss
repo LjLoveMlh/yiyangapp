@@ -121,6 +121,7 @@
             -ms-flex-align: center;
                 align-items: center;
         text-align: center;
+        z-index: 1;
 }
 .articleItem .itemLeft.data-v-073e2e7e {
     -webkit-box-flex: 2.34;

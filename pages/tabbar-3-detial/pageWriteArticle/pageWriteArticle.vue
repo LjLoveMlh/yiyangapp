@@ -38,14 +38,10 @@
 
 
 		<!-- 编辑器 -->
-		<view class="page-body ">
+		<view>
 			<ly-markdown :showPreview="showPreview" :textareaData.sync="textareaData" :textareaHtml.sync="textareaHtml"></ly-markdown>
 		</view>
 
-
-
-
-	
 	</view>
 </template>
 
@@ -57,17 +53,20 @@
 		},
 		data() {
 			return {
+
+				// 原来的富文本编辑器
 				textareaData: "",
 				textareaHtml: "",
 				showPreview: false,
 				name: '七月_',
-
-
 				textareaAValue: null,
 				isfocus: false,
-
 				classIndex: -1,
 				pickerClass: ['', '经验', '晒单'],
+
+
+				// 官方原版富文本编辑器
+				placeholder: '开始输入...'
 
 			};
 		},
@@ -89,15 +88,24 @@
 			textareaAInput(e) {
 				this.textareaAValue = e.detail.value
 			},
-
-
-
 			// 选择分类
 			PickerChangeClass(e) {
 				this.classIndex = e.detail.value
-			}
+			},
 
+
+			//官方原来的富文本编辑器
+			onEditorReady() {
+				uni.createSelectorQuery().select('#editor').context((res) => {
+					this.editorCtx = res.context
+				}).exec()
+			},
+			undo() {
+				this.editorCtx.undo()
+			}
 		}
+
+
 	}
 </script>
 
@@ -177,7 +185,4 @@
 		line-height: 2.2;
 		vertical-align: middle;
 	}
-	
-	
-
 </style>

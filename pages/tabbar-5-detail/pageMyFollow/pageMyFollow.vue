@@ -12,7 +12,6 @@
 
 
 		<!-- 关注列表 -->
-
 		<view class="articleList ">
 			<block v-for="(item,index) in 10">
 				<view class="articleItem margin-top-sm  margin-lr-sm shadow padding-tb-sm padding-lr-sm  bg-white  flex" @tap="goToPageUserDetail">
@@ -37,21 +36,21 @@
 					<view class="itemEnd">
 						<view class="cuIcon-moreandroid text-gray" :data-id="index" @tap.stop="funMoreOptions"></view>
 					</view>
-
-
-
-
 					<!-- 能用但是点击事件弄不好 -->
 					<!-- 弹出蒙层 -->
-					<!-- <block >
-						<view class="grayItem" :class="[index===itemCur?'animation-fade':'']" v-show='index===itemCur' @tap.stop="itemCur=-1">
+					<block>
+						<view class="grayItem" 
+						:class="[index===itemCur?'animation-fade':'animation-fade']" 
+						v-if='index===itemCur' 
+						:style="[{animationDelay:0.2 + 's'}]"
+						@tap.stop="closeMaskItem(index)">
 							<view class="grayItemMain  ">
 								<block v-for="(item,index) in maskList" :key='index'>
-									<view class="grayReItem bg-white  ">{{item}}</view>
+									<view class="grayReItem bg-white">{{item}}</view>
 								</block>
 							</view>
 						</view>
-					</block> -->
+					</block>
 				</view>
 			</block>
 		</view>
@@ -77,7 +76,7 @@
 				articleTabList: ['全部', '话题', '达人', '分类', '品牌', '商品', '关键词', '商城'],
 
 
-				isItemHidden: true,
+
 				itemCur: -1,
 				maskList: ['开启推送', '订阅设置', '取消关注']
 			};
@@ -88,15 +87,19 @@
 				this.TabCur = e.currentTarget.dataset.id;
 				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60
 			},
+
+			// 打开蒙层
 			funMoreOptions(e) {
-				// uni.showToast({
-				// 	title: '点击生效'
-				// })
 				this.itemCur = +e.currentTarget.dataset.id;
 				console.log(this.itemCur)
-				// this.isItemHidden = false;
 			},
+			// 关闭蒙层
+			closeMaskItem(index) {
+				console.log(index)
+				this.itemCur = -1;
+				console.log(this.itemCur)
 
+			},
 			goToPageUserDetail() {
 				uni.navigateTo({
 					url: '/pages/tabbar-5-detail/pageMyFollow/pageUserDetail/pageUserDetail'
@@ -159,7 +162,10 @@
 					display: flex;
 					align-items: center;
 					text-align: center;
+					z-index: 1;
 				}
+
+
 			}
 		}
 
